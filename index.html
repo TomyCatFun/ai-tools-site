@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+
+<!-- SEO базове -->
+<meta content="Каталог AI-інструментів для заробітку — обирай, порівнюй та заробляй з AI!" name="description"/>
+<meta content="AI, заробіток, інструменти, штучний інтелект, фріланс, ChatGPT, Midjourney" name="keywords"/>
+<meta content="AI Tools Project" name="author"/>
+<!-- Open Graph для Facebook, LinkedIn -->
+<meta content="Каталог AI-інструментів для заробітку" property="og:title"/>
+<meta content="Порівнюй найкращі інструменти та дізнавайся, як заробляти за допомогою AI." property="og:description"/>
+<meta content="https://example.com/preview.png" property="og:image"/>
+<meta content="https://example.com" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Каталог AI-інструментів для заробітку" name="twitter:title"/>
+<meta content="Порівнюй AI-інструменти та розраховуй прибуток." name="twitter:description"/>
+<meta content="https://example.com/preview.png" name="twitter:image"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- ✅ PWA: Web App Manifest -->
+<link href="manifest.json" rel="manifest"/>
+<meta content="#0a0a0a" name="theme-color"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="AI Tools" name="apple-mobile-web-app-title"/>
+<link rel="icon" href="favicon.png" type="image/x-icon" />
+
+<link rel="canonical" href="https://example.com/" />
+<link rel="alternate" hreflang="uk" href="https://example.com/" />
+<link rel="alternate" hreflang="en" href="https://example.com/?lang=en" />
+<link rel="alternate" hreflang="de" href="https://example.com/?lang=de" />
+
+<title>Каталог AI-Інструментів</title>
+<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="Порівнюй найкращі AI-інструменти — для фрілансу, бізнесу, Etsy або TikTok. Заробляй з ChatGPT, Midjourney, Notion AI та ін.">
+<meta property="og:title" content="Каталог AI-Інструментів для Заробітку">
+<meta property="og:description" content="Порівнюй, дізнавайся кейси та розраховуй прибуток. Всі AI-інструменти в одному місці!">
+<meta property="og:image" content="https://example.com/preview.png">
+<meta property="og:url" content="https://example.com">
+
+<link rel="icon" href="favicon.png" type="image/png" />
+
+
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Каталог AI-Інструментів для Заробітку",
+    "url": "https://example.com",
+    "description": "Каталог AI-інструментів для заробітку — обирай, порівнюй та заробляй з AI!",
+    "inLanguage": "uk",
+    "image": "https://example.com/preview.png"
+  }
+  </script>
+</head>
+
+ 
+<body>
+<header>
+<h1 data-i18n="title">Каталог AI-Інструментів для Заробітку</h1>
+
+
+
+</header>
+
+
+<!-- 🌐 Перемикач мов -->
+<div class="lang-dropdown">
+<button class="lang-btn" title="Змінити мову">🇺🇦 Українська ▼</button>
+<div class="lang-options">
+  <div onclick="selectLang('en')">🇪🇳🇬 English</div>
+  <div onclick="selectLang('de')">🇩🇪 Deutsch</div>
+  <div onclick="selectLang('ua')">🇺🇦 Українська</div>
+</div>
+</div>
+<nav class="main-nav">
+  <a href="index.html" data-i18n="nav_home">Головна</a>
+  <a href="about.html" data-i18n="nav_about">Про нас</a>
+  <a href="contacts.html" data-i18n="nav_contacts">Контакти</a>
+  <a href="https://www.buymeacoffee.com/tomycat" target="_blank"
+     data-i18n="nav_support"
+     style="background:#FFDD00;padding:8px 16px;border-radius:8px;color:black;text-decoration:none;font-weight:bold;">
+    ☕ Підтримати проєкт
+  </a>
+</nav>
+</nav>
+
+
+
+<section id="successStories" style="margin-bottom: 40px;">
+  <h2 id="toggleCases" data-i18n="key_заголовок_кейсів" style="color:#00ffaa; text-align:center; cursor:pointer;" onclick="toggleCarousel()">
+    💡 Історії Заробітку з AI
+  </h2>
+  <div class="carousel-wrapper" id="caseCarousel" style="display:none;">
+    <div class="carousel-track">
+
+      <div class="carousel-item" data-i18n="key_кейс_amanda">
+        👩‍💻 <strong>Amanda (США)</strong> заробляє до $8,000 за 3 тижні, тестуючи чат‑ботів вночі.
+      </div>
+      
+      <!-- Ben без посилання -->
+      <div class="carousel-item" data-i18n="key_кейс_ben">
+        🧠 <strong>Ben</strong> створив 2 AI‑інфлюенсери й заробив $250,000 за рік на маркетингу.
+      </div>
+
+      <!-- Ірина — Etsy + Midjourney -->
+<div class="carousel-item" data-i18n="key_кейс_iryna">
+  👩‍🎨 <strong>Ірина</strong> створює ілюстрації в Midjourney та продає цифрові постери на Etsy — $370/місяць.
+</div>
+
+<!-- Тарас — Fiverr + ChatGPT -->
+<div class="carousel-item" data-i18n="key_кейс_taras">
+  💬 <strong>Тарас</strong> використовує ChatGPT для написання текстів на Fiverr — $25–50 за замовлення.
+</div>
+
+<!-- Лейла — TikTok + AI Tools -->
+<div class="carousel-item" data-i18n="key_кейс_leila">
+  🎥 <strong>Лейла</strong> публікує короткі відео про AI у TikTok і заробляє на партнерках — $800/місяць.
+</div>
+    </div>
+  </div>
+</section>
+
+<div class="ai-consulting" style="background:#111; color:#eee; padding:20px; border-radius:12px; max-width:800px; margin:40px auto; box-shadow:0 0 12px rgba(0,136,204,0.2); text-align:center;">
+  <p data-i18n="consulting_help" style="font-size:1.2em;">
+    💼 Потрібна допомога з AI-інструментами або запуском сайту?
+  </p>
+  <a href="https://t.me/AIToolsCatalog" target="_blank" class="consult-btn"
+     data-i18n="consulting_button"
+     style="background:#00aaff; padding:10px 16px; border-radius:8px; color:white; text-decoration:none; font-weight:bold; display:inline-block; margin-top:12px;">
+    ✉️ Напиши на сервері в Telegram, я відпишу тобі.
+  </a>
+</div>
+
+
+
+<div class="premium-offer" style="background:#1a1a1a; padding:20px; margin:20px auto; border-radius:12px; max-width:800px; text-align:center; box-shadow:0 0 12px rgba(255, 221, 0, 0.2);">
+  <p data-i18n="subscribe_pitch_1" style="font-size:1.2em;">🔐 Хочеш більше реальних AI-кейсів і прибуткових стратегій?</p>
+  <p data-i18n="subscribe_pitch_2">📩 Підпишись на наш закритий дайджест — лише $1/тиждень</p>
+  <a data-i18n="subscribe_button" href="https://coff.ee/tomycat"  data-i18n="subscribe_pitch_2" target="_blank" class="subscribe-btn" style="background:#FFDD00;padding:10px 16px;border-radius:8px;color:#000;text-decoration:none;font-weight:bold;display:inline-block;margin-top:12px;">
+    🔔 Підписатися
+  </a>
+</div>
+
+<div class="controls">
+  <input id="searchInput" onkeyup="filterTools()" placeholder="Searching for a tool..." type="text" data-i18n="key_пошук_інструменту"/>
+  
+  <select id="categorySelect" onchange="filterTools()">
+    <option value="" data-i18n="key_усі_категорії">Усі категорії</option>
+    <option value="текст" data-i18n="key_текст">Текст</option>
+    <option value="зображення" data-i18n="key_зображення">Зображення</option>
+    <option value="відео" data-i18n="key_відео">Відео</option>
+    <option value="голос" data-i18n="key_голос">Голос</option>
+    <option value="сайт" data-i18n="key_сайт">Сайт</option>
+    <option value="логотип" data-i18n="key_логотип">Логотип</option>
+    <option value="організація" data-i18n="key_організація">Організація</option>
+  </select>
+
+  <select id="levelSelect" onchange="filterTools()">
+    <option value="" data-i18n="key_усі_рівні">Усі рівні</option>
+    <option value="новачок" data-i18n="key_для_новачків">Для новачків</option>
+    <option value="середній" data-i18n="key_середній_рівень">Середній рівень</option>
+    <option value="просунутий" data-i18n="key_для_просунутих">Для просунутих</option>
+  </select>
+
+  <select id="sortSelect" onchange="sortTools()">
+    <option value="default" data-i18n="key_сортування">Сортування</option>
+    <option value="new" data-i18n="key_спочатку_нові">Спочатку нові</option>
+    <option value="popular" data-i18n="key_спочатку_популярні">Спочатку популярні</option>
+  </select>
+</div>
+
+
+
+
+<main class="container" id="toolContainer">
+  
+
+  <div class="tool-card" data-category="текст" data-date="2023-12-01" data-level="новачок" data-popularity="90">
+    <h2>ChatGPT</h2>
+    <div class="rating" data-tool="chatgpt"></div>
+    <span class="votes-count" data-tool="chatgpt"></span>
+    <p data-i18n="key_опис_chatgpt">
+      Генерує тексти, відповіді, ідеї. Використовуй для написання статей, постів або фрілансу.
+    </p>
+    <a data-i18n="key_відкрити" href="https://chat.openai.com/" target="_blank">Відкрити</a>
+    <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+      <input class="compare-checkbox" data-tool="chatgpt" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+      <span data-i18n="key_порівняти">🧩 Порівняти</span>
+    </label>
+  </div>
+  
+<div class="tool-card" data-category="зображення" data-date="2023-09-15" data-level="просунутий" data-popularity="75">
+  <h2>Midjourney</h2>
+  <div class="rating" data-tool="midjourney"></div>
+  <span class="votes-count" data-tool="midjourney"></span>
+  <p data-i18n="key_опис_midjourney">Створення зображень на основі тексту. Ідеально підходить для дизайну, NFT, Pinterest.</p>
+  <a data-i18n="key_відкрити" href="https://www.midjourney.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="midjourney" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="голос" data-date="2024-01-10" data-level="середній" data-popularity="65">
+  <h2>ElevenLabs</h2>
+  <div class="rating" data-tool="elevenlabs"></div>
+  <span class="votes-count" data-tool="elevenlabs"></span>
+  <p data-i18n="key_опис_elevenlabs">AI-голосове озвучення. Можна створювати TikTok, відео або продавати озвучки клієнтам.</p>
+  <a data-i18n="key_відкрити" href="https://www.elevenlabs.io/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="elevenlabs" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="сайт" data-date="2024-04-01" data-level="новачок" data-popularity="55">
+  <h2>Durable</h2>
+  <div class="rating" data-tool="durable"></div>
+  <span class="votes-count" data-tool="durable"></span>
+  <p data-i18n="key_опис_durable">AI-конструктор сайтів. Створює сайти за 30 секунд, корисно для фрілансерів та бізнесу.</p>
+  <a data-i18n="key_відкрити" href="https://durable.co/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="durable" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="логотип" data-date="2022-11-10" data-level="новачок" data-popularity="45">
+  <h2>Looka</h2>
+  <div class="rating" data-tool="looka"></div>
+  <span class="votes-count" data-tool="looka"></span>
+  <p data-i18n="key_опис_looka">AI-генератор логотипів. Допомагає створювати бренд швидко і просто, навіть без дизайнера.</p>
+  <a data-i18n="key_відкрити" href="https://looka.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="looka" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="організація" data-date="2023-07-25" data-level="середній" data-popularity="60">
+  <h2>Notion AI</h2>
+  <div class="rating" data-tool="notion-ai"></div>
+  <span class="votes-count" data-tool="notion-ai"></span>
+  <p data-i18n="key_опис_notion">Асистент для планування, написання текстів, організації — підходить для навчання і бізнесу.</p>
+  <a data-i18n="key_відкрити" href="https://www.notion.so/product/ai" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="notion-ai" style="transform:scale(1.3); accent-color:#ffffff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="відео" data-date="2023-10-20" data-level="середній" data-popularity="70">
+  <h2>Runway</h2>
+  <div class="rating" data-tool="runway"></div>
+  <span class="votes-count" data-tool="runway"></span>
+  <p data-i18n="key_опис_runway">Відеоредактор на основі AI. Можна створювати відео без досвіду, ідеально для TikTok/YouTube.</p>
+  <a data-i18n="key_відкрити" href="https://runwayml.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="runway" style="transform:scale(1.3); accent-color:#ffffff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="зображення" data-date="2024-05-10" data-level="середній" data-popularity="68">
+  <h2>Leonardo.Ai</h2>
+  <div class="badge badge💸" data-i18n="badge_no_investment">💸 Без вкладень</div>
+  <div class="rating" data-tool="leonardo"></div>
+  <span class="votes-count" data-tool="leonardo"></span>
+  <p data-i18n="key_опис_leonardo">
+    Генератор зображень для коміксів, ігор, арту. Добре працює з концепт-дизайном та NFT.
+  </p>
+  <a data-i18n="key_відкрити" href="https://leonardo.ai/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="leonardo" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+  <div style="margin-top:8px;font-size:0.9em;">
+    💵 <span data-i18n="label_earnings">Заробіток</span>: <strong>$250</strong><br>
+    💼 <span data-i18n="label_jobs">Вакансій</span>: <strong>450</strong><br>
+    💸 <span data-i18n="label_investment">Вкладення</span>: <strong>$0</strong>
+  </div>
+</div>
+
+<div class="tool-card" data-category="текст" data-date="2024-04-18" data-level="новачок" data-popularity="50">
+  <h2>Poe</h2>
+  <div class="rating" data-tool="poe"></div>
+  <span class="votes-count" data-tool="poe"></span>
+  <p data-i18n="key_опис_poe">
+    Чат-платформа, де можна взаємодіяти з ChatGPT, Claude та іншими ботами одночасно.
+  </p>
+  <a data-i18n="key_відкрити" href="https://poe.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="poe" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+
+</div>
+
+<div class="tool-card" data-category="відео" data-date="2025-03-01" data-level="середній" data-popularity="62">
+  <h2>HeyGen</h2>
+  <div class="rating" data-tool="heygen"></div>
+  <span class="votes-count" data-tool="heygen"></span>
+  <p data-i18n="key_опис_heygen">
+    Генерує відео з аватарами та озвучкою. Корисно для презентацій, курсів і соціальних мереж.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.heygen.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="heygen" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="текст" data-date="2025-02-15" data-level="новачок" data-popularity="58">
+  <h2>Copy.ai</h2>
+  <div class="rating" data-tool="copyai"></div>
+  <span class="votes-count" data-tool="copyai"></span>
+  <p data-i18n="key_опис_copyai">
+    Створює маркетингові тексти, email-листи, SEO-описи — ідеально для копірайтерів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.copy.ai/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="copyai" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="зображення" data-date="2025-01-20" data-level="просунутий" data-popularity="60">
+  <h2>BlueWillow</h2>
+  <div class="rating" data-tool="bluewillow"></div>
+  <span class="votes-count" data-tool="bluewillow"></span>
+  <p data-i18n="key_опис_bluewillow">
+    AI-генерація зображень у стилі Midjourney. Можна використовувати для дизайну, принтів і NFT.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.bluewillow.ai/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="bluewillow" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="голос" data-date="2025-03-12" data-level="новачок" data-popularity="57">
+  <h2>Voicemod</h2>
+  <div class="rating" data-tool="voicemod"></div>
+  <span class="votes-count" data-tool="voicemod"></span>
+  <p data-i18n="key_опис_voicemod">
+    Голосовий модифікатор у реальному часі. Корисно для стрімерів, відео або розваг.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.voicemod.net/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="voicemod" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="текст" data-date="2025-02-28" data-level="середній" data-popularity="66">
+  <h2>Writesonic</h2>
+  <div class="rating" data-tool="writesonic"></div>
+  <span class="votes-count" data-tool="writesonic"></span>
+  <p data-i18n="key_опис_writesonic">
+    Генерує SEO-тексти, блоги, email-кампанії. Добре працює для маркетологів і копірайтерів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://writesonic.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="writesonic" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="зображення" data-date="2025-01-30" data-level="просунутий" data-popularity="61">
+  <h2>Artbreeder</h2>
+  <div class="rating" data-tool="artbreeder"></div>
+  <span class="votes-count" data-tool="artbreeder"></span>
+  <p data-i18n="key_опис_artbreeder">
+    AI-злиття зображень та створення облич. Ідеально для арт-дизайну, портретів та творчості.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.artbreeder.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="artbreeder" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="голос" data-date="2025-04-01" data-level="новачок" data-popularity="54">
+  <h2>Speechify</h2>
+  <div class="rating" data-tool="speechify"></div>
+  <span class="votes-count" data-tool="speechify"></span>
+  <p data-i18n="key_опис_speechify">
+    Перетворює текст у природну мову. Ідеально для прослуховування статей, книг або PDF.
+  </p>
+  <a data-i18n="key_відкрити" href="https://speechify.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="speechify" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="текст" data-date="2025-04-03" data-level="новачок" data-popularity="59">
+  <h2>QuillBot</h2>
+  <div class="rating" data-tool="quillbot"></div>
+  <span class="votes-count" data-tool="quillbot"></span>
+  <p data-i18n="key_опис_quillbot">
+    Перефразовує тексти, спрощує граматику. Дуже корисно для студентів та SEO-редакторів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://quillbot.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="quillbot" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="зображення" data-date="2025-03-18" data-level="новачок" data-popularity="56">
+  <h2>Canva AI</h2>
+  <div class="rating" data-tool="canva"></div>
+  <span class="votes-count" data-tool="canva"></span>
+  <p data-i18n="key_опис_canva">
+    Додає AI-функції до Canva: автодизайн, генерація зображень, шаблони — все в одному.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.canva.com/ai/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="canva" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="організація" data-date="2025-03-10" data-level="середній" data-popularity="60">
+  <h2>Taskade</h2>
+  <div class="rating" data-tool="taskade"></div>
+  <span class="votes-count" data-tool="taskade"></span>
+  <p data-i18n="key_опис_taskade">
+    AI для створення чеклістів, нотаток і робочих просторів — підходить для команд і студентів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://www.taskade.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="taskade" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="сайт" data-date="2025-03-05" data-level="новачок" data-popularity="52">
+  <h2>TeleportHQ</h2>
+  <div class="rating" data-tool="teleport"></div>
+  <span class="votes-count" data-tool="teleport"></span>
+  <p data-i18n="key_опис_teleport">
+    Генерує повні HTML-сайти з простого опису. Корисно для швидкого старту фріланс-проектів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://teleporthq.io/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="teleport" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="відео" data-date="2025-03-25" data-level="новачок" data-popularity="50">
+  <h2>Lumen5</h2>
+  <div class="rating" data-tool="lumen5"></div>
+  <span class="votes-count" data-tool="lumen5"></span>
+  <p data-i18n="key_опис_lumen5">
+    Створює відео з тексту автоматично. Добре підходить для соцмереж, презентацій, реклами.
+  </p>
+  <a data-i18n="key_відкрити" href="https://lumen5.com/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="lumen5" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+<div class="tool-card" data-category="текст" data-date="2025-03-30" data-level="середній" data-popularity="63">
+  <h2>Jenni AI</h2>
+  <div class="rating" data-tool="jenni"></div>
+  <span class="votes-count" data-tool="jenni"></span>
+  <p data-i18n="key_опис_jenni">
+    Помічник для академічного письма. Пропонує фрази, формулювання, підказки — ідеально для студентів.
+  </p>
+  <a data-i18n="key_відкрити" href="https://jenni.ai/" target="_blank">Відкрити</a>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:10px;cursor:pointer;color:#ffffff;font-weight:bold;">
+    <input class="compare-checkbox" data-tool="jenni" style="transform:scale(1.3); accent-color:#00ccff;" type="checkbox"/>
+    <span data-i18n="key_порівняти">🧩 Порівняти</span>
+  </label>
+</div>
+
+
+
+
+</main>
+
+<!-- Для невидимой капчи-->
+<form id="star-captcha-form" style="display:none">
+<button class="g-recaptcha" data-callback="onStarCaptcha" data-sitekey="6LfRCWArAAAAAN7YyQtuskQBMqh87Mm25BEny0h0" data-size="invisible" id="star-captcha-btn">
+</button>
+</form>
+
+<!-- Для видимой капчи-->
+<form id="star-captcha-form">
+  <button
+    class="g-recaptcha"
+    data-sitekey="6Lc1B2ArAAAAAPaX87OK8e2DDYIboXdmTiCEQV7x"
+    data-callback="onStarCaptcha"
+    data-size="invisible"
+    style="display: none;">
+    Надіслати
+  </button>
+</form>
+</div>
+<!-- 💸 Кнопка підтримки -->
+<div class="support-btn" onclick="toggleAffiliates()">
+  <span data-i18n="key_підтримай">💸 <b>Підтримай проєкт</b></span> — 
+  <span data-i18n="key_отримай_бонуси">отримай бонуси за реєстрацію</span>
+</div>
+<!-- 🔗 Список бонусів -->
+<div class="support-links" id="affiliate-links" style="display: none;">
+<ul>
+<li>🔗 <a data-i18n="bonus_upwork" href="https://upwork.com/signup?ref=tviyID" target="_blank">Upwork — $0 комісії перші 30 днів</a></li>
+<li>🟢 <a data-i18n="bonus_fiverr" href="https://fiverr.com/join?ref=tviyID" target="_blank">Fiverr — $100 бонусу</a></li>
+<li>📘 <a data-i18n="bonus_notion" href="https://notion.so/?ref=tviyID" target="_blank">Notion AI — +10$ на рахунок</a></li>
+</ul>
+</div>
+<!-- ✅ Повідомлення подяки -->
+<div id="supportThanks" data-i18n="subscribe_thanks" style="display:none; color:#00ff88; text-align:center; margin-top:10px;">
+  ✅ Дякуємо за підтримку 💙
+</div>
+<!-- ✅ Графік  -->
+<div style="text-align:center; padding: 20px;">
+  <h2 style="color:#00aaff" data-i18n="key_топ_3_ai_інструменти_за_заробітком">ТОП-3 AI-інструменти за заробітком</h2>
+  <img alt="Графік заробітку" src="images/earnings-top3-dark.png" style="max-width:500px; width:100%; height:auto; border-radius:12px; box-shadow:0 0 12px rgba(0,153,255,0.3);"/>
+  <br/>
+  <a class="earnings-btn" data-i18n="earnings_btn" href="#toolContainer" onclick="openModal(); return false;">
+        Дивитись приклади заробітку
+      </a>
+
+
+<!-- 💸 Модальне вікно прикладів заробітку -->
+<div id="caseModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000c; z-index:1002; align-items:center; justify-content:center;">
+  <div style="background:#1a1a1a; color:white; padding:30px; max-width:500px; border-radius:12px; box-shadow:0 0 10px #00aaff; position:relative;">
+    <button onclick="closeModal()" style="position:absolute; top:10px; right:10px; background:none; border:none; color:white; font-size:20px; cursor:pointer;">×</button>
+    <h3 data-i18n="key_приклади_заробітку" style="color:#00ffaa; margin-top:0;">Приклади заробітку</h3>
+    <ul style="line-height:1.6">
+      <li data-i18n="key_earn_midjourney"><strong>Midjourney:</strong> $380 на Etsy (арт-постери)</li>
+      <li data-i18n="key_earn_durable"><strong>Durable:</strong> 5 сайтів × $8 = $40</li>
+      <li data-i18n="key_earn_elevenlabs"><strong>ElevenLabs:</strong> $200 за озвучення TikTok</li>
+      <li data-i18n="key_earn_notion"><strong>Notion AI:</strong> 1800 грн за реферати</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 🧩 Модальне вікно порівняння -->
+<div id="compareModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000c; z-index:1002; align-items:center; justify-content:center;">
+  <div style="background:#1a1a1a; color:white; padding:30px; max-width:95%; width:800px; border-radius:12px; box-shadow:0 0 10px #00aaff; overflow-x:auto; position:relative;">
+    <button onclick="closeCompare()" style="position:absolute; top:10px; right:10px; background:none; border:none; color:white; font-size:20px; cursor:pointer;">×</button>
+    <h2 data-i18n="key_порівняння_інструментів" style="color:#00ffaa;">Порівняння AI-Інструментів</h2>
+    <table id="compareTable" style="width:100%; margin-top:20px; border-collapse:collapse;"></table>
+  </div>
+</div>
+<!-- Блок міні-курсів/гайдів -->
+<div class="knowledge-layout">
+  <section id="mini-guides">
+    <h2 data-i18n="key_мінікурси_заголовок">Міні-курси та корисні гайди</h2>
+    <ul>
+      <li class="guide-link" onclick="location.href='comingsoon.html'">
+        📹 <b data-i18n="key_заробіток_ai">Як почати заробляти з AI?</b> — 
+        <span class="highlight" data-i18n="key_відео_гайд">Відео-гайд (1 хв) або текстова інструкція</span>
+      </li>
+      <li class="guide-link" onclick="location.href='coming soon.html'">
+        <b data-i18n="key_топ_5_ai">ТОП 5 способів заробітку з AI для новачка</b> — 
+        <span class="highlight" data-i18n="key_читати">читати</span>
+      </li>
+      <li class="guide-link" onclick="location.href='comingsoon.html'">
+        <b data-i18n="key_ai_шахрайство">Як не попастися на шахрайство при роботі з AI?</b> — 
+        <span class="highlight" data-i18n="key_faq">FAQ</span>
+      </li>
+      <li class="guide-link" onclick="location.href='coming soon.html'">
+        <b data-i18n="key_перший_клієнт">Перший продаж фрілансеру: як знайти клієнта?</b> — 
+        <span class="highlight" data-i18n="key_короткий_курс">Короткий курс</span>
+      </li>
+      <li class="guide-link" onclick="location.href='coming soon.html'">
+        <b data-i18n="key_старт_без_знань">Старт без знань: Як зробити простий сайт/логотип за 5 хвилин?</b> — 
+        <span class="highlight" data-i18n="key_відео">Відео</span>
+      </li>
+      <li class="guide-link" onclick="location.href='comingsoon.html'">
+        <b data-i18n="key_продаж_ai">Як продати AI-роботу на Etsy/Pinterest?</b> — 
+        <span class="highlight" data-i18n="key_читати">читати</span>
+      </li>
+    </ul>
+  </section>
+
+ 
+
+
+  <section style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    <h2 data-i18n="key_faq_заголовок" style="color:#00aaff;">📚 Поширені питання (FAQ)</h2>
+    <p data-i18n="key_faq_опис" style="color:#aaa; font-size:0.95em;">Швидкі відповіді на найпопулярніші запити</p>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question" data-i18n="key_faq_q1">Як заробити на AI для тексту?</div>
+      <div class="faq-answer" data-i18n="key_faq_a1">Використовуй ChatGPT або Notion AI для написання статей, SEO-контенту, описів товарів і фрілансу на платформах.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question" data-i18n="key_faq_q2">Які ризики для авторських прав при генерації тексту?</div>
+      <div class="faq-answer" data-i18n="key_faq_a2">Не копіюй чужі фрази дослівно. Генеруй унікальні тексти, додавай редагування й перевірку через антиплагіат.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question" data-i18n="key_faq_q3">Як монетизувати AI-зображення?</div>
+      <div class="faq-answer" data-i18n="key_faq_a3">Генеруй арт через Midjourney або Leonardo.ai і продавай на Etsy, Redbubble або як постери в Instagram.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question" data-i18n="key_faq_q4">Чи реально заробити на AI-відео новачку?</div>
+      <div class="faq-answer" data-i18n="key_faq_a4">Так! Створи озвучку через ElevenLabs або відео через Runway, додай текст і музику — і заливай у TikTok або Shorts.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question" data-i18n="key_faq_q5">Як уникати бану відео з AI-озвучкою?</div>
+      <div class="faq-answer" data-i18n="key_faq_a5">Додавай коментар або контекст, уникай політичних/чутливих тем, змінюй голос або міксуй з природним.</div>
+    </div>
+  </section>
+</div>
+
+<section class="subscribe-box" id="topAuthors">
+<h2 data-i18n="top_users"></h2>
+<ul id="authorList" style="list-style:none;padding:0;margin:0;color:#ccc;"></ul>
+</section>
+<!-- 📬 Блок підписки на новини -->
+<section class="subscribe-box" id="subscribe">
+<h2 data-i18n="subscribe_title">📬 Підписка на нові AI-інструменти</h2>
+<p data-i18n="subscribe_desc">Отримуйте оновлення про нові інструменти, можливості та поради для заробітку прямо на e-mail або в Telegram</p>
+<form class="subscribe-form" onsubmit="subscribeUser(event)">
+  <input type="email" data-i18n-placeholder="email_placeholder" placeholder="Ваш e-mail" />
+<button data-i18n="subscribe_btn" type="submit">🔔 Підписатися на email-дайджест</button>
+<a data-i18n="telegram_notify" href="https://t.me/AIToolsCatalog" target="_blank">🤖 Отримувати сповіщення у Telegram</a>
+</form>
+<p class="subscribe-success" data-i18n="subscribe_thanks" id="subscribeMsg">✅ Дякуємо! Ви підписані.</p>
+</section>
+<div style="text-align:center; margin-top:40px;">
+<h3 data-i18n="share_section_title" style="color:#00aaff;">🔗 Поділитися сайтом</h3>
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px;">
+<a data-i18n="share_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" style="background:#1877f2;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;" target="_blank">Facebook</a>
+<a data-i18n="share_twitter" href="https://twitter.com/intent/tweet?url=https://example.com&amp;text=Дивись%20топ%20AI-інструменти%20для%20заробітку!" style="background:#1da1f2;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;" target="_blank">Twitter</a>
+<a data-i18n="share_telegram" href="https://t.me/share/url?url=https://example.com&amp;text=Топ%20AI-інструменти%20для%20заробітку" style="background:#0088cc;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;" target="_blank">Telegram</a>
+<a data-i18n="share_linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://example.com" style="background:#0a66c2;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;" target="_blank">LinkedIn</a>
+</div>
+</div>
+<!-- ✅ Блок з трьома кнопками у правому нижньому куті -->
+<div style="position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 1000;">
+<button data-i18n="calculator" id="calcBtn" style="
+    padding: 10px 20px;
+    background: #ffaa00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  ">💰 Калькулятор прибутку</button>
+<button data-i18n="compare" id="compareBtn" style="
+    padding: 10px 20px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">🔍 Порівняти</button>
+<button data-i18n="addTool" id="addToolBtn" style="
+    padding: 10px 20px;
+    background: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">+ Додати свій інструмент</button>
+</div>
+<!-- 🟨 Модальне вікно калькулятора прибутку -->
+<div id="calcModal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+">
+<div style="
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 12px #ffaa00;
+  ">
+<button onclick="closeCalcModal()" style="
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    ">×</button>
+
+<label data-i18n="key_інструмент">Інструмент:</label>
+<select id="calcTool" style="width:100%;padding:10px;margin-top:5px;">
+  <option value="chatgpt">ChatGPT</option>
+  <option value="midjourney">Midjourney</option>
+  <option value="elevenlabs">ElevenLabs</option>
+  <option value="durable">Durable</option>
+  <option value="notion-ai">Notion AI</option>
+  <option value="looka">Looka</option>
+  <option value="runway">Runway</option>
+</select>
+
+<br/><br/>
+
+<label data-i18n="key_платформа">Платформа:</label>
+<select id="calcPlatform" style="width:100%;padding:10px;margin-top:5px;">
+  <option value="upwork">Upwork</option>
+  <option value="fiverr">Fiverr</option>
+  <option value="etsy">Etsy</option>
+  <option value="tiktok">TikTok</option>
+</select>
+
+<br/><br/>
+
+<label data-i18n="key_годин_тиждень">Годин/замовлень на тиждень:</label>
+<input id="calcHours" style="width:100%;padding:10px;" type="number" value="10"/>
+
+<br/><br/>
+
+<button onclick="calculateEarnings()" data-i18n="key_розрахувати" style="
+  padding: 10px 15px;
+  background: #ffaa00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+">📈 Розрахувати</button>
+
+<div id="calcResult" style="margin-top:15px; color:#ccc;"></div>
+</div>
+</div>
+<!-- 🔵 Запитати у спільноти -->
+<div style="margin-top: 40px; background-color: #111; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 0 12px rgba(0, 153, 255, 0.2);">
+  <h2 data-i18n="community_heading" style="color: #00aaff;">🤝 Запитати у спільноти</h2>
+  <p data-i18n="community_description">
+    Маєш питання або хочеш поділитись досвідом? Приєднуйся до нашої Telegram-групи та спілкуйся з іншими користувачами!
+  </p>
+  <a data-i18n="join_telegram" href="https://t.me/AIToolsCatalog" style="
+      display: inline-block;
+      margin-top: 12px;
+      background-color: #0088cc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,136,204,0.3);
+    " target="_blank">
+    🔗 Приєднатися до Telegram
+  </a>
+</div>
+<script>
+
+   let captchaVerified = false;
+   let voteCount = 0;
+
+   captchaVerified = localStorage.getItem("captcha_passed") === "true";
+voteCount = +(localStorage.getItem("vote_count") || 0);
+</script>
+<script>
+   function selectLang(lang) {
+  setLang(lang);
+  document.querySelector('.lang-options').style.display = 'none'; // 🔒 Приховати меню після вибору
+}
+   const messages = {
+  ua: {
+    wait_30s: "Зачекайте трохи перед повторним надсиланням (30 секунд). ❗",
+    confirm_human: "Підтвердьте, що ви не робот.",
+    form_sent: "Інформацію надіслано!",
+label_tool: "Назва",
+label_category: "Категорія",
+label_link: "Посилання",
+label_description: "Опис",
+form_moderated: "Форма буде перевірена модератором. Дякуємо ❤️",
+button_clear_form: "Очистити форму",
+rating_summary: "({votes} votes, stars: {avg})",
+compare_alert: "Виберіть щонайменше 2 інструменти для порівняння.",
+field_parameter: "Параметр",
+field_name: "Назва",
+field_price: "Ціна",
+field_features: "Функції",
+field_difficulty: "Легкість",
+field_language: "Мова",
+field_payout: "Заробіток",
+field_popularity: "Популярність",
+sw_registered: "Service Worker зареєстровано",
+sw_error: "SW помилка",
+add_to_home: "📲 Додати на головний екран",
+install_accepted: "Встановлення підтверджено",
+install_declined: "Встановлення скасовано",
+sort_earnings: "Заробіток на місяць",
+sort_freelance: "К-сть вакансій на фрілансі",
+sort_investment: "Мінімальні вкладення",
+calc_platform: "Платформа",
+calc_profit_after_fee: "Прибуток після комісії",
+calc_week: "за тиждень",
+calc_month: "за місяць",
+calc_rate: "Ставка",
+calc_fee: "Комісія",
+anonymous: "Анонім",
+email_placeholder: "Ваш e-mail"
+
+  },
+  en: {
+    wait_30s: "Please wait before submitting again (30 seconds). ❗",
+    confirm_human: "Please confirm you're not a robot.",
+    form_sent: "Information submitted!",
+label_tool: "Tool Name",
+label_category: "Category",
+label_link: "Link",
+label_description: "Description",
+form_moderated: "The form will be reviewed by a moderator. Thank you ❤️",
+button_clear_form: "Clear Form",
+rating_summary: "({votes} votes, stars: {avg})",
+compare_alert: "Please select at least 2 tools to compare.",
+field_parameter: "Parameter",
+field_name: "Name",
+field_price: "Price",
+field_features: "Features",
+field_difficulty: "Difficulty",
+field_language: "Language",
+field_payout: "Earnings",
+field_popularity: "Popularity",
+sw_registered: "Service Worker registered",
+sw_error: "SW error",
+add_to_home: "📲 Add to Home Screen",
+install_accepted: "Installation confirmed",
+install_declined: "Installation dismissed",
+sort_earnings: "Monthly Earnings",
+sort_freelance: "Freelance Jobs Count",
+sort_investment: "Minimum Investment",
+calc_platform: "Platform",
+calc_profit_after_fee: "Profit after fee",
+calc_week: "per week",
+calc_month: "per month",
+calc_rate: "Rate",
+calc_fee: "Fee",
+anonymous: "Anonymous",
+email_placeholder: "Your email"
+
+
+  },
+  de: {
+    wait_30s: "Bitte warte 30 Sekunden vor dem erneuten Senden. ❗",
+    confirm_human: "Bitte bestätigen Sie, dass Sie kein Roboter sind.",
+    form_sent: "Information gesendet!",
+label_tool: "Name des Tools",
+label_category: "Kategorie",
+label_link: "Link",
+label_description: "Beschreibung",
+form_moderated: "Das Formular wird vom Moderator überprüft. Danke ❤️",
+button_clear_form: "Formular löschen",
+rating_summary: "({votes} Stimmen, stars: {avg})",
+compare_alert: "Bitte wähle mindestens 2 Tools zum Vergleichen aus.",
+field_parameter: "Parameter",
+field_name: "Name",
+field_price: "Preis",
+field_features: "Funktionen",
+field_difficulty: "Schwierigkeit",
+field_language: "Sprache",
+field_payout: "Einnahmen",
+field_popularity: "Popularität",
+sw_registered: "Service Worker registriert",
+sw_error: "SW-Fehler",
+add_to_home: "📲 Zum Startbildschirm hinzufügen",
+install_accepted: "Installation bestätigt",
+install_declined: "Installation abgelehnt",
+sort_earnings: "Monatliche Einnahmen",
+sort_freelance: "Freelance-Aufträge",
+sort_investment: "Minimale Investition",
+calc_platform: "Plattform",
+calc_profit_after_fee: "Gewinn nach Gebühr",
+calc_week: "pro Woche",
+calc_month: "pro Monat",
+calc_rate: "Stundensatz",
+calc_fee: "Gebühr",
+anonymous: "Anonym",
+mail_placeholder: "Deine E-Mail"
+
+
+
+  }
+};
+
+  function toggleAffiliates() {
+  const links = document.getElementById('affiliate-links');
+  const thanks = document.getElementById('supportThanks');
+
+  const isVisible = links.style.display === 'block';
+  links.style.display = isVisible ? 'none' : 'block';
+
+  if (!isVisible) {
+    thanks.style.display = 'block';
+    setTimeout(() => {
+      thanks.style.display = 'none';
+    }, 5000);
+  } else {
+    thanks.style.display = 'none';
+  }
+}
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+  const langBtn = document.querySelector(".lang-btn");
+  if (langBtn) {
+    langBtn.addEventListener("click", function () {
+      const menu = document.querySelector(".lang-options");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  }
+});
+
+  // Закривати меню, якщо клік поза ним
+  window.addEventListener('click', function (e) {
+    if (!e.target.closest('.lang-dropdown')) {
+      document.querySelector('.lang-options').style.display = 'none';
+    }
+  });
+</script>
+
+<script src="lang.js"></script>
+<script>
+  let lang = localStorage.getItem("lang") || "ua";
+const savedLang = localStorage.getItem("lang") || "ua";
+  document.documentElement.lang = savedLang;
+
+
+  const btn = document.querySelector(".lang-btn");
+  if (btn) {
+    if (savedLang === "en") btn.innerHTML = "🇪🇳🇬 English ▼";
+    else if (savedLang === "de") btn.innerHTML = "🇩🇪 Deutsch ▼";
+    else btn.innerHTML = "🇺🇦 Українська ▼";
+  }
+</script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector('.carousel-wrapper');
+    if (!wrapper) return;
+
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    wrapper.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return; // тільки ЛКМ
+      isDragging = true;
+      wrapper.classList.add('active');
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      isDragging = false;
+      wrapper.classList.remove('active');
+    });
+
+    wrapper.addEventListener('mouseup', () => {
+      isDragging = false;
+      wrapper.classList.remove('active');
+    });
+
+    wrapper.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 1.5; // прискорення
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+
+<script>
+  function toggleCarousel() {
+    const carousel = document.getElementById("caseCarousel");
+    if (!carousel) return;
+    const isVisible = carousel.style.display === "block";
+    carousel.style.display = isVisible ? "none" : "block";
+  }
+</script>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA3hopQ38VGzzkEJ3ZAYRWMgBuw8PRNoVc",
+    authDomain: "ai-tools-login-a1d51.firebaseapp.com",
+    projectId: "ai-tools-login-a1d51",
+    storageBucket: "ai-tools-login-a1d51.appspot.com",
+    messagingSenderId: "210064078293",
+    appId: "1:210064078293:web:b010be90d0a07da302b95c"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  firebase.auth().onAuthStateChanged((user) => {
+    const greeting = document.getElementById("userGreeting");
+    const loginLink = document.getElementById("loginLink");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (user) {
+      const name = user.displayName || user.email.split("@")[0];
+
+      if (greeting) greeting.textContent = `👋 Привіт, ${name}`;
+      if (loginLink) loginLink.style.display = "none";
+      if (logoutBtn) logoutBtn.style.display = "inline";
+
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        firebase.auth().signOut().then(() => {
+          window.location.href = "index.html"; // або перезавантаження
+        });
+      });
+    }
+  });
+</script>
+
+
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+
+<script>
+  let lastSubmissionTime = 0;
+  
+  function getUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      search: params.get("search") || "",
+      category: params.get("category") || "",
+      sort: params.get("sort") || "default"
+    };
+  }
+  
+  function updateUrlParams() {
+    const search = document.getElementById("searchInput").value;
+    const category = document.getElementById("categorySelect").value;
+    const sort = document.getElementById("sortSelect").value;
+  
+    const params = new URLSearchParams();
+    if (search) params.set("search", search);
+    if (category) params.set("category", category);
+    if (sort && sort !== "default") params.set("sort", sort);
+  
+    history.replaceState(null, "", "?" + params.toString());
+  }
+  
+  function applyFiltersFromUrl() {
+    const params = getUrlParams();
+  
+    document.getElementById("searchInput").value = params.search;
+    document.getElementById("categorySelect").value = params.category;
+    document.getElementById("sortSelect").value = params.sort;
+  
+    filterTools();
+    sortTools();
+  }
+  
+  function filterTools() {
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const category = document.getElementById("categorySelect").value;
+  const level = document.getElementById("levelSelect").value;
+  const container = document.getElementById("toolContainer");
+  const cards = container.getElementsByClassName("tool-card");
+
+  for (let i = 0; i < cards.length; i++) {
+    const title = cards[i].getElementsByTagName("h2")[0].textContent.toLowerCase();
+    const cardCategory = cards[i].getAttribute("data-category");
+    const cardLevel = cards[i].getAttribute("data-level");
+
+    const matchesSearch = title.includes(search);
+    const matchesCategory = !category || cardCategory === category;
+    const matchesLevel = !level || cardLevel === level;
+
+    cards[i].style.display = (matchesSearch && matchesCategory && matchesLevel) ? "block" : "none";
+  }
+}
+  
+function sortTools() {
+  updateUrlParams();
+
+  const select = document.getElementById("sortSelect").value;
+  const container = document.getElementById("toolContainer");
+  const cards = Array.from(container.getElementsByClassName("tool-card"));
+
+  let sorted = cards;
+
+  if (select === "new") {
+    sorted = cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+  } else if (select === "popular") {
+    sorted = cards.sort((a, b) => b.dataset.popularity - a.dataset.popularity);
+  } else if (select === "earnings") {
+    sorted = cards.sort((a, b) => {
+      const aId = a.querySelector("h2").textContent.trim().toLowerCase();
+      const bId = b.querySelector("h2").textContent.trim().toLowerCase();
+      return (toolData[bId]?.заробіток || 0) - (toolData[aId]?.заробіток || 0);
+    });
+  } else if (select === "freelance") {
+    sorted = cards.sort((a, b) => {
+      const aId = a.querySelector("h2").textContent.trim().toLowerCase();
+      const bId = b.querySelector("h2").textContent.trim().toLowerCase();
+      return (toolData[bId]?.вакансії || 0) - (toolData[aId]?.вакансії || 0);
+    });
+  } else if (select === "investment") {
+    sorted = cards.sort((a, b) => {
+      const aId = a.querySelector("h2").textContent.trim().toLowerCase();
+      const bId = b.querySelector("h2").textContent.trim().toLowerCase();
+      return (toolData[aId]?.вкладення || 0) - (toolData[bId]?.вкладення || 0);
+    });
+  }
+
+  sorted.forEach(card => container.appendChild(card));
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+      applyFiltersFromUrl();
+      setupToolLinks();
+      renderRatings();
+
+      
+
+      const savedLang = localStorage.getItem("lang") || "ua";
+  document.documentElement.lang = savedLang;
+  applyLang(savedLang);
+
+  const calcBtn = document.getElementById("calcBtn");
+  if (calcBtn) {
+    calcBtn.onclick = function() {
+      document.getElementById("calcModal").style.display = "flex";
+    };
+  }
+
+  const addToolBtn = document.getElementById("addToolBtn");
+if (addToolBtn) {
+  addToolBtn.onclick = createFormModal;
+}
+
+const addToolBtnAlt = document.getElementById("addToolBtnAlt");
+if (addToolBtnAlt) {
+  addToolBtnAlt.onclick = createFormModal;
+}
+
+
+  const btn = document.querySelector(".lang-btn");
+  if (btn) {
+    if (savedLang === "en") btn.innerHTML = "🇪🇳🇬 English ▼";
+    else if (savedLang === "de") btn.innerHTML = "🇩🇪 Deutsch ▼";
+    else btn.innerHTML = "🇺🇦 Українська ▼";
+  }
+
+ const compareBtn = document.getElementById("compareBtn");
+ if (compareBtn) {
+  compareBtn.onclick = () => {
+    const checked = Array.from(document.querySelectorAll(".compare-checkbox:checked"));
+    lang = localStorage.getItem("lang") || "ua"; // без const
+
+
+    if (checked.length < 2) {
+      alert(messages[lang].compare_alert);
+      return;
+    }
+
+    const rows = [
+      { label: messages[lang].field_name, key: "name" },
+      { label: messages[lang].field_price, key: "price" },
+      { label: messages[lang].field_features, key: "features" },
+      { label: messages[lang].field_difficulty, key: "difficulty" },
+      { label: messages[lang].field_language, key: "language" },
+      { label: messages[lang].field_payout, key: "payout" },
+      { label: messages[lang].field_popularity, key: "popularity" }
+    ];
+
+    const html = [];
+    html.push("<tr><th>" + messages[lang].field_parameter + "</th>" +
+      checked.map(cb => `<th>${cb.dataset.tool}</th>`).join("") + "</tr>");
+
+    rows.forEach(row => {
+      html.push("<tr><td>" + row.label + "</td>" +
+        checked.map(cb => {
+          const tool = toolData[cb.dataset.tool];
+          return `<td>${tool?.[row.key] || "-"}</td>`;
+        }).join("") +
+        "</tr>");
+    });
+
+    document.getElementById("compareTable").innerHTML = html.join("");
+    document.getElementById("compareModal").style.display = "flex";
+  };
+}
+
+
+      const cards = document.querySelectorAll(".tool-card");
+
+  cards.forEach(card => {
+  const name = card.querySelector("h2")?.textContent.trim().toLowerCase();
+  const data = toolData[name];
+
+  if (data) {
+    const infoBlock = document.createElement("div");
+    infoBlock.style.marginTop = "8px";
+    infoBlock.style.fontSize = "0.9em";
+    infoBlock.innerHTML = `
+      💵 <span data-i18n="label_earnings">Earnings</span>: <strong>$${data.earnings}</strong><br>
+      💼 <span data-i18n="label_jobs">Jobs</span>: <strong>${data.jobs}</strong><br>
+      💸 <span data-i18n="label_investment">Investment</span>: <strong>$${data.investment}</strong>
+    `;
+    card.appendChild(infoBlock);
+    applyLang(localStorage.getItem("lang") || "ua");
+
+    // 🟢 Вставляємо перекладені бейджі
+    lang = localStorage.getItem("lang") || "ua"; // без const
+
+    const badges = document.createElement("div");
+    badges.style.marginBottom = "10px";
+    let count = 0;
+
+    if (data.earnings >= 1000 && count < 2) {
+      const span = document.createElement("span");
+      span.className = "badge badge🔥";
+      span.setAttribute("data-i18n", "badge_top_earnings");
+      span.textContent = translations[lang]["badge_top_earnings"];
+      badges.appendChild(span);
+      count++;
+    }
+
+    if (data.investment === 0 && count < 2) {
+      const span = document.createElement("span");
+      span.className = "badge badge💸";
+      span.setAttribute("data-i18n", "badge_no_investment");
+      span.textContent = translations[lang]["badge_no_investment"];
+      badges.appendChild(span);
+      count++;
+    }
+
+    if (data.jobs >= 700 && count < 2) {
+      const span = document.createElement("span");
+      span.className = "badge badge💼";
+      span.setAttribute("data-i18n", "badge_many_jobs");
+      span.textContent = translations[lang]["badge_many_jobs"];
+      badges.appendChild(span);
+      count++;
+    }
+
+    card.insertBefore(badges, card.querySelector(".rating"));
+  }
+});
+
+    });
+
+    const addToolBtnAlt = document.getElementById("addToolBtnAlt");
+if (addToolBtnAlt) {
+  addToolBtnAlt.onclick = createFormModal;
+}
+
+  
+function setupToolLinks() {
+  
+  const cards = document.querySelectorAll('.tool-card');
+
+  const externalLinks = {
+  runway: 'https://runwayml.com',
+  looka: 'https://looka.com',
+  leonardo: 'https://leonardo.ai/',
+  poe: 'https://poe.com/',
+  midjourney: 'https://www.midjourney.com/',
+  elevenlabs: 'https://www.elevenlabs.io/',
+  durable: 'https://durable.co/',
+  notion: 'https://www.notion.so/product/ai',
+  heygen: 'https://www.heygen.com/',
+  copyai: 'https://www.copy.ai/',
+  bluewillow: 'https://www.bluewillow.ai/',
+  writesonic: 'https://writesonic.com/',
+  artbreeder: 'https://www.artbreeder.com/',
+  voicemod: 'https://www.voicemod.net/',
+  speechify: 'https://speechify.com/',
+  quillbot: 'https://quillbot.com/',
+  canva: 'https://www.canva.com/ai/',
+  taskade: 'https://www.taskade.com/',
+  teleport: 'https://teleporthq.io/',
+  jenni: 'https://jenni.ai/',
+  lumen5: 'https://lumen5.com/'
+};
+
+  cards.forEach(card => {
+  card.style.cursor = 'pointer';
+
+  card.addEventListener('click', function (e) {
+    if (
+      e.target.closest('.rating') ||
+      e.target.closest('.compare-checkbox') ||
+      e.target.closest('label')
+    ) return;
+
+    const slug = card.querySelector('.rating')?.getAttribute('data-tool');
+    if (!slug) {
+      console.warn('Не знайдено slug (data-tool) у картці:', card);
+      return;
+    }
+
+    if (externalLinks[slug]) {
+      window.open(externalLinks[slug], '_blank');
+    } else {
+      window.open(`/tool/${slug}.html`, '_blank');
+    }
+  });
+});
+}
+
+  function createFormModal() {
+    const modal = document.createElement("div");
+    modal.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:#000a;display:flex;align-items:center;justify-content:center;z-index:1001;";
+  
+    modal.innerHTML = `
+  <div style="background:#1a1a1a;padding:30px;border-radius:10px;max-width:400px;width:90%;color:#fff;position:relative">
+    <button id="closeModalBtn" style="position:absolute;top:10px;right:10px;background:none;border:none;color:#fff;font-size:20px;cursor:pointer">&times;</button>
+    <h2 data-i18n="modal_add_tool_title">Додати AI-Інструмент</h2>
+    <form id="toolForm">
+      <label data-i18n="label_tool_name">Назва інструменту:<br><input name="tool" required style="width:100%;padding:8px;margin:5px 0"></label><br>
+      <label data-i18n="label_category">Категорія:<br><input name="category" style="width:100%;padding:8px;margin:5px 0"></label><br>
+      <label data-i18n="label_username">Ваш нікнейм:<br><input name="userName" required style="width:100%;padding:8px;margin:5px 0"></label><br>
+      <label data-i18n="label_link">Посилання:<br><input name="link" type="url" required style="width:100%;padding:8px;margin:5px 0"></label><br>
+      <label data-i18n="label_description">Опис:<br><textarea name="description" rows="4" style="width:100%;padding:8px;margin:5px 0"></textarea></label><br>
+      <div style="display:none">
+        <label data-i18n="label_honeypot">Якщо ви людина — залиште це поле порожнім:<br><input name="honey"></label>
+      </div>
+      <div id="recaptcha-container" style="margin-bottom:10px"></div>
+      <button type="submit" data-i18n="button_submit" style="padding:10px 15px;background:#00aaff;border:none;color:#fff;border-radius:5px;cursor:pointer">Надіслати</button>
+      <button type="button" id="clearFormBtn" data-i18n="button_clear_form" style="padding:10px 15px;background:#f00;border:none;color:#fff;border-radius:5px;cursor:pointer">Очистити форму</button>
+    </form>
+  </div>
+`;
+
+    document.body.appendChild(modal);
+  
+    document.getElementById("closeModalBtn").onclick = () => modal.remove();
+  
+    const form = document.getElementById("toolForm");
+    document.getElementById("clearFormBtn").onclick = function () {
+    form.reset();
+    localStorage.removeItem("ai_tool_form");
+  };
+  
+    // Відновити дані форми з localStorage якщо є
+    // форма буде оголошена пізніше
+    const savedData = localStorage.getItem("ai_tool_form");
+    if (savedData) {
+      const values = JSON.parse(savedData);
+      for (const [key, value] of Object.entries(values)) {
+        const field = form.elements.namedItem(key);
+        if (field) field.value = value;
+      }
+    }
+  
+    grecaptcha.ready(function () {
+    grecaptcha.render("recaptcha-container", {
+      sitekey: "6Lc9CWArAAAAAObW8T6C9ex5GW3TLcmYlsuJjcz8"
+    });
+  });
+  
+    // оголошення перенесено вище — не потрібно повторно
+  // const form = document.getElementById("toolForm");
+    form.addEventListener("submit", function(event) {
+      // Зберегти дані у localStorage
+      localStorage.setItem("ai_tool_form", JSON.stringify(Object.fromEntries(new FormData(form))));
+  
+      event.preventDefault();
+      const formData = new FormData(form);
+
+      // 🟢 Зберігаємо інструмент з ніком у localStorage
+      const tools = JSON.parse(localStorage.getItem("submittedTools")) || [];
+      tools.push({
+      tool: formData.get("tool"),
+      userName: formData.get("userName"),
+      rating: 0
+});
+
+localStorage.setItem("submittedTools", JSON.stringify(tools));
+      const now = Date.now();
+      lang = localStorage.getItem("lang") || "ua"; // без const
+
+
+      if (now - lastSubmissionTime < 30000) {
+  alert(messages[lang].wait_30s);
+  return;
+}
+
+      lastSubmissionTime = now;
+  
+      if (formData.get("honey")) return;
+      if (!grecaptcha.getResponse()) {
+  alert(messages[lang].confirm_human);
+  return;
+}
+  
+      form.style.display = "none";
+  
+      const resultHTML = `
+  <div style="margin-top:15px;padding:15px;background:#0f01;padding:10px;border:1px solid #0f04;border-radius:6px">
+    <h3 style="color:#0f0">✅ ${messages[lang].form_sent}</h3>
+    <p><strong>${messages[lang].label_tool}:</strong> ${formData.get("tool")}</p>
+    <p><strong>${messages[lang].label_category}:</strong> ${formData.get("category")}</p>
+    <p><strong>${messages[lang].label_link}:</strong> <a href='${formData.get("link")}' target="_blank" style="color:#00f">${formData.get("link")}</a></p>
+    <p><strong>${messages[lang].label_description}:</strong> ${formData.get("description")}</p>
+    <p style="margin-top:10px;color:#ccc">${messages[lang].form_moderated}</p>
+  </div>
+`;
+
+  
+      form.insertAdjacentHTML("afterend", resultHTML);
+  
+      // Додати кнопку очищення
+      const clearButton = document.createElement("button");
+      clearButton.textContent = messages[lang].button_clear_form;
+      clearButton.style.cssText = "margin-top:10px;padding:8px 12px;background:#f00;border:none;color:#fff;border-radius:4px;cursor:pointer";
+      clearButton.onclick = () => {
+        form.reset();
+        localStorage.removeItem("ai_tool_form");
+};
+
+      form.parentElement.appendChild(clearButton);
+  
+      setTimeout(() => {
+        const confirmationBox = document.querySelector("#toolForm + div");
+        if (confirmationBox) confirmationBox.remove();
+        modal.remove();
+        localStorage.removeItem("ai_tool_form");
+      }, 8000);
+  
+      formData.append("g-recaptcha-response", grecaptcha.getResponse());
+      fetch("https://formspree.io/f/mgvywonk", {
+        method: "POST",
+        body: formData
+      });
+    });
+  }
+  
+
+
+  
+  function renderRatings() {
+    const tools = Array.from(document.querySelectorAll(".rating"))
+  .map(el => el.getAttribute("data-tool"))
+  .filter(Boolean);
+
+    tools.forEach(tool => {
+      const ratingDiv = document.querySelector(`.rating[data-tool='${tool}']`);
+      const votesSpan = document.querySelector(`.votes-count[data-tool='${tool}']`);
+      if (!ratingDiv || !votesSpan) return;
+  
+      const ratingData = JSON.parse(localStorage.getItem(`ai_rating_${tool}`)) || { sum: 0, votes: 0, user: 0 };
+      let avg = ratingData.votes ? (ratingData.sum / ratingData.votes) : 0;
+      avg = Math.round(avg * 2) / 2;
+  
+      let html = "";
+      for (let i = 1; i <= 5; i++) {
+        let cls = "";
+        if (i <= Math.floor(avg)) cls = "selected";
+        else if (i - avg === 0.5) cls = "half";
+        if (i === ratingData.user) cls += " user-vote";
+        html += `<span data-rate="${i}" data-index="${i}" class="${cls.trim()}" tabindex="-1" style="outline: none;">&#9733;</span>`;
+
+      }
+      ratingDiv.innerHTML = html;
+      if (ratingData.votes) {
+  votesSpan.textContent = messages[lang].rating_summary
+    .replace("{votes}", ratingData.votes)
+    .replace("{avg}", avg); 
+} else {
+  votesSpan.textContent = "";
+}
+  
+      ratingDiv.querySelectorAll("span").forEach(star => {
+        star.onclick = function (event) {
+    event.stopPropagation();
+    window._starVote = { tool, rate: +star.getAttribute("data-rate") };
+
+    if (captchaVerified && voteCount < 10) {
+      handleVote(); // ✅ голосуємо без капчі
+    } else {
+      document.getElementById("star-captcha-form").style.display = "block";
+      grecaptcha.reset();
+      grecaptcha.execute(); // 🔐 показуємо капчу лише коли потрібно
+    }
+  };
+    star.onmouseover = function () {
+      const idx = +this.getAttribute("data-index");
+      ratingDiv.querySelectorAll("span").forEach(s => {
+        if (+s.getAttribute("data-index") <= idx) s.classList.add("hovered");
+        else s.classList.remove("hovered");
+      });
+    };
+    star.onmouseout = function () {
+      ratingDiv.querySelectorAll("span").forEach(s => s.classList.remove("hovered"));
+    };
+  });
+    });
+  }
+   // <--- викликаємо для рейтингу
+    // ... далі твій код ...
+  
+  
+    window._starVote = null; // Сюди будемо зберігати вибір
+  
+    function onStarCaptcha(token) {
+    if (token) {
+      captchaVerified = true;
+      voteCount = 0;
+      localStorage.setItem("captcha_passed", "true");
+      localStorage.setItem("vote_count", "0");
+      handleVote(); // одразу голосуємо
+    }
+  }
+  function handleVote() {
+  const { tool, rate } = window._starVote || {};
+  if (!tool || !rate) return;
+
+  const key = `ai_rating_${tool}`;
+  const ratingData = JSON.parse(localStorage.getItem(key)) || { sum: 0, votes: 0, user: 0 };
+
+  // Якщо вже голосував — замінюємо оцінку
+  if (ratingData.user > 0) {
+    ratingData.sum -= ratingData.user;
+    ratingData.votes -= 1;
+  }
+
+  ratingData.sum += rate;
+  ratingData.votes += 1;
+  ratingData.user = rate;
+
+  localStorage.setItem(key, JSON.stringify(ratingData));
+  renderRatings();
+  window._starVote = null;
+
+  // Збільшуємо кількість голосів
+  if (captchaVerified) {
+    voteCount += 1;
+    localStorage.setItem("vote_count", voteCount);
+
+    // Після 10 голосів — знову показувати капчу
+    if (voteCount >= 10) {
+      captchaVerified = false;
+      localStorage.removeItem("captcha_passed");
+      localStorage.removeItem("vote_count");
+    }
+  }
+}
+
+
+  function openModal() {
+    document.getElementById("caseModal").style.display = "flex";
+  }
+  function closeModal() {
+    document.getElementById("caseModal").style.display = "none";
+  }
+  
+  const toolData = {
+  "chatgpt": {
+    name: "ChatGPT",
+    price: "Free/$20",
+    features: "Text, code, SEO",
+    difficulty: "★★★★☆",
+    language: "UA/EN",
+    payout: "$400–800",
+    popularity: "🔥 High",
+    earnings: 600,
+    jobs: 1200,
+    investment: 0
+  },
+  "midjourney": {
+    name: "Midjourney",
+    price: "from $10",
+    features: "Images",
+    difficulty: "★★☆☆☆",
+    language: "EN",
+    payout: "$380",
+    popularity: "🔥 High",
+    earnings: 380,
+    jobs: 850,
+    investment: 10
+  },
+  "elevenlabs": {
+    name: "ElevenLabs",
+    price: "$0–5+",
+    features: "Voiceover",
+    difficulty: "★★★★☆",
+    language: "EN",
+    payout: "$200+",
+    popularity: "🔥 Medium",
+    earnings: 200,
+    jobs: 640,
+    investment: 5
+  },
+  "durable": {
+    name: "Durable",
+    price: "Free/$",
+    features: "Websites",
+    difficulty: "★★★★☆",
+    language: "EN",
+    payout: "$40",
+    popularity: "🔥 Medium",
+    earnings: 40,
+    jobs: 500,
+    investment: 0
+  },
+  "notion ai": {
+    name: "Notion AI",
+    price: "Pro only",
+    features: "Organization",
+    difficulty: "★★★★★",
+    language: "GE/UA/EN",
+    payout: "$20",
+    popularity: "🔥 Medium",
+    earnings: 20,
+    jobs: 780,
+    investment: 0
+  },
+  "looka": {
+    name: "Looka",
+    price: "from $5",
+    features: "Logos",
+    difficulty: "★★★☆☆",
+    language: "EN",
+    payout: "$300",
+    popularity: "🔥 Low",
+    earnings: 300,
+    jobs: 300,
+    investment: 5
+  },
+  "runway": {
+    name: "Runway",
+    price: "Free/$15+",
+    features: "Video",
+    difficulty: "★★★☆☆",
+    language: "EN",
+    payout: "$400",
+    popularity: "🔥 Medium",
+    earnings: 400,
+    jobs: 520,
+    investment: 0
+  },
+
+  "leonardo": {
+    name: "Leonardo.Ai",
+    price: "Freemium",
+    features: "Image generation, concept art, NFT",
+    difficulty: "★★★☆☆",
+    language: "English",
+    payout: "$250",
+    popularity: "🔥 Medium",
+    earnings: 250,
+    jobs: 450,
+    investment: 0
+  },
+
+  "poe": {
+  name: "Poe",
+  price: "Free",
+  features: "AI chat platform (GPT-4, Claude, others)",
+  difficulty: "★☆☆☆☆",
+  language: "EN",
+  payout: "$180",
+  popularity: "⭐ Low",
+  earnings: 180,
+  jobs: 730,
+  investment: 0
+  },
+
+  "heygen": {
+  name: "HeyGen",
+  price: "Free / $29+",
+  features: "Avatar video generation",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$350",
+  popularity: "🔥 Medium",
+  earnings: 350,
+  jobs: 620,
+  investment: 0
+},
+
+"copyai": {
+  name: "Copy.ai",
+  price: "Free / $36",
+  features: "Marketing and SEO text generation",
+  difficulty: "★★☆☆☆",
+  language: "EN",
+  payout: "$280",
+  popularity: "🔥 Medium",
+  earnings: 280,
+  jobs: 800,
+  investment: 0
+},
+
+"bluewillow": {
+  name: "BlueWillow",
+  price: "Free",
+  features: "Image generation like Midjourney",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$200",
+  popularity: "⭐ Low",
+  earnings: 200,
+  jobs: 400,
+  investment: 0
+},
+
+"voicemod": {
+  name: "Voicemod",
+  price: "Free / $12+",
+  features: "Real-time voice changer",
+  difficulty: "★★☆☆☆",
+  language: "EN",
+  payout: "$150",
+  popularity: "⭐ Low",
+  earnings: 150,
+  jobs: 300,
+  investment: 0
+},
+
+"writesonic": {
+  name: "Writesonic",
+  price: "Free / $36",
+  features: "SEO, email, blog content",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$320",
+  popularity: "🔥 Medium",
+  earnings: 320,
+  jobs: 770,
+  investment: 0
+},
+
+"artbreeder": {
+  name: "Artbreeder",
+  price: "Free / $8+",
+  features: "Face blending, AI art",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$210",
+  popularity: "⭐ Low",
+  earnings: 210,
+  jobs: 390,
+  investment: 0
+},
+
+"speechify": {
+  name: "Speechify",
+  price: "Free / $11+",
+  features: "Text-to-speech",
+  difficulty: "★☆☆☆☆",
+  language: "EN",
+  payout: "$190",
+  popularity: "⭐ Low",
+  earnings: 190,
+  jobs: 420,
+  investment: 0
+},
+
+"quillbot": {
+  name: "QuillBot",
+  price: "Free / $9.95",
+  features: "Paraphrasing, grammar",
+  difficulty: "★★☆☆☆",
+  language: "EN",
+  payout: "$250",
+  popularity: "🔥 Medium",
+  earnings: 250,
+  jobs: 650,
+  investment: 0
+},
+
+"canva": {
+  name: "Canva AI",
+  price: "Free / $12.99",
+  features: "Auto design, image generation",
+  difficulty: "★☆☆☆☆",
+  language: "UA/EN",
+  payout: "$300",
+  popularity: "🔥 Medium",
+  earnings: 300,
+  jobs: 710,
+  investment: 0
+},
+
+"taskade": {
+  name: "Taskade",
+  price: "Free / $5+",
+  features: "Productivity, task manager",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$160",
+  popularity: "⭐ Low",
+  earnings: 160,
+  jobs: 360,
+  investment: 0
+},
+
+"teleport": {
+  name: "TeleportHQ",
+  price: "Free / $15+",
+  features: "Website generator",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$280",
+  popularity: "⭐ Low",
+  earnings: 280,
+  jobs: 490,
+  investment: 0
+},
+
+"lumen5": {
+  name: "Lumen5",
+  price: "Free / $19+",
+  features: "Video from text",
+  difficulty: "★★☆☆☆",
+  language: "EN",
+  payout: "$230",
+  popularity: "⭐ Low",
+  earnings: 230,
+  jobs: 470,
+  investment: 0
+},
+
+"jenni": {
+  name: "Jenni AI",
+  price: "Free / $20",
+  features: "Academic writing assistant",
+  difficulty: "★★★☆☆",
+  language: "EN",
+  payout: "$260",
+  popularity: "🔥 Medium",
+  earnings: 260,
+  jobs: 540,
+  investment: 0
+}
+
+
+};
+
+
+  
+  function closeCompare() {
+    document.getElementById("compareModal").style.display = "none";
+  }
+  function toggleFaq(element) {
+  element.classList.toggle("active");
+}
+function subscribeUser(e) {
+  e.preventDefault();
+  const email = document.getElementById("subscriberEmail").value;
+  // Можеш реалізувати бекенд через Google Sheets / Firebase / FormSubmit / власний
+  document.getElementById("subscriberEmail").value = "";
+  document.getElementById("subscribeMsg").style.display = "block";
+}
+
+// ✅ PWA Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log(`✅ ${messages[lang].sw_registered}`))
+      .catch(err => console.warn(`❌ ${messages[lang].sw_error}:`, err));
+  });
+}
+
+// 📲 PWA: Add to Home Screen
+let deferredPrompt;
+const installBtn = document.createElement("button");
+installBtn.textContent = messages[lang].add_to_home;
+installBtn.style.cssText = "position:fixed;bottom:140px;right:20px;padding:10px 16px;background:#00cc66;color:white;border:none;border-radius:8px;cursor:pointer;z-index:1000;font-size:1em;box-shadow:0 0 10px rgba(0,0,0,0.3);display:none";
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.body.appendChild(installBtn);
+  installBtn.style.display = "block";
+});
+
+installBtn.addEventListener("click", async () => {
+  installBtn.style.display = "none";
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") {
+      console.log(`✅ ${messages[lang].install_accepted}`);
+    } else {
+      console.log(`❌ ${messages[lang].install_declined}`);
+    }
+    deferredPrompt = null;
+  }
+});
+
+
+// 🔽 І додай розширення селектора
+const sortSelect = document.getElementById("sortSelect");
+if (sortSelect) {
+  sortSelect.innerHTML += `
+    <option value="earnings">${messages[lang].sort_earnings}</option>
+    <option value="freelance">${messages[lang].sort_freelance}</option>
+    <option value="investment">${messages[lang].sort_investment}</option>
+  `;
+}
+
+
+  function closeCalcModal() {
+  document.getElementById("calcModal").style.display = "none";
+}
+
+function calculateEarnings() {
+  const tool = document.getElementById("calcTool").value;
+  const platform = document.getElementById("calcPlatform")?.value || "upwork";
+  const hours = parseInt(document.getElementById("calcHours").value) || 0;
+
+  const rates = {
+    chatgpt: 12,
+    midjourney: 8,
+    elevenlabs: 10,
+    durable: 30,
+    "notion-ai": 9,
+    looka: 7,
+    runway: 11,
+    poe: 9,
+    heygen: 14,
+    copyai: 12,
+    bluewillow: 10,
+    voicemod: 9,
+    writesonic: 13,
+    artbreeder: 10,
+    speechify: 9,
+    quillbot: 11,
+    canva: 12,
+    taskade: 8,
+    teleport: 13,
+    jenni: 11,
+    lumen5: 10
+
+  };
+
+  const platformFees = {
+    upwork: 0.10,
+    fiverr: 0.20,
+    etsy: 0.00,
+    tiktok: 0.00
+  };
+
+  const baseRate = rates[tool] || 10;
+  const fee = platformFees[platform] || 0;
+
+  const grossWeekly = baseRate * hours;
+  const netWeekly = grossWeekly * (1 - fee);
+  const netMonthly = netWeekly * 4;
+
+  document.getElementById("calcResult").innerHTML = `
+    💼 Платформа: <strong>${platform.charAt(0).toUpperCase() + platform.slice(1)}</strong>
+    <br>📅 Прибуток <u>після комісії</u>:
+    <br>– за тиждень: <strong>$${netWeekly.toFixed(2)}</strong>
+    <br>– за місяць: <strong>$${netMonthly.toFixed(2)}</strong>
+    <br><span style="font-size:0.85em;color:#777">
+      * Ставка: $${baseRate}/год, Комісія: ${(fee * 100).toFixed(0)}%
+    </span>
+  `;
+}
+function toggleAffiliates() {
+    const links = document.getElementById('affiliate-links');
+    const thanks = document.getElementById('supportThanks');
+
+    const isVisible = links.style.display === 'block';
+    links.style.display = isVisible ? 'none' : 'block';
+
+    if (!isVisible) {
+      thanks.style.display = 'block';
+      setTimeout(() => {
+        thanks.style.display = 'none';
+      }, 5000);
+    } else {
+      thanks.style.display = 'none';
+    }
+  }
+
+  function updateTopAuthors() {
+  const tools = JSON.parse(localStorage.getItem("submittedTools")) || [];
+  const ratings = {}; // userName → total score
+
+  tools.forEach(t => {
+  const score = t.rating || 0;
+  const name = t.userName || messages[lang].anonymous;
+  if (!ratings[name]) ratings[name] = 0;
+  ratings[name] += score;
+});
+
+  const sorted = Object.entries(ratings)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
+
+  const list = document.getElementById("authorList");
+  if (list) {
+    list.innerHTML = sorted.map(([name, score], i) =>
+      `<li>🥇 ${i + 1}. <b>${name}</b> — ${score} балів</li>`
+    ).join("");
+  }
+}
+
+function setLang(lang) {
+  // Зберігаємо вибір
+  localStorage.setItem("lang", lang);
+
+  // Встановлюємо <html lang="xx">
+  document.documentElement.lang = lang;
+
+  // Застосовуємо переклад
+  applyLang(lang);
+
+  // Оновлюємо текст на кнопці перемикача мови
+  const btn = document.querySelector(".lang-btn");
+  if (btn) {
+    if (lang === "en") btn.innerHTML = "🇪🇳🇬 English ▼";
+    else if (lang === "de") btn.innerHTML = "🇩🇪 Deutsch ▼";
+    else btn.innerHTML = "🇺🇦 Українська ▼";
+  }
+}
+
+
+function applyLang(lang) {
+  // Перекладаємо всі елементи з data-i18n
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key]; // ✅ ВАЖЛИВО
+    } else {
+      console.warn("Немає перекладу для ключа:", key);
+    }
+  });
+
+  // Перекладаємо плейсхолдери
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+}
+
+
+const loginLink = document.querySelector(".login-btn");
+  if (localStorage.getItem("loggedIn") === "true" && loginLink) {
+    loginLink.textContent = "👤 Профіль";
+    loginLink.href = "profile.html";
+  }
+
+  </script>
+
+
+
+</html>

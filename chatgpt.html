@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="chatgpt_title">ChatGPT — AI-Інструмент</title>
+  <meta name="description" content="Дізнайся, як використовувати ChatGPT для написання текстів, генерації ідей та заробітку на фрілансі.">
+  <meta name="keywords" content="ChatGPT, AI текст, фріланс, генератор контенту, заробіток, GPT, OpenAI">
+  <meta name="author" content="AI Tools Project">
+  <meta property="og:title" content="ChatGPT — AI для тексту та заробітку">
+  <meta property="og:description" content="Детальний опис, можливості, заробіток і поради по використанню ChatGPT.">
+  <meta property="og:image" content="https://example.com/images/chatgpt-preview.png">
+  <meta property="og:url" content="https://example.com/chatgpt.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT — AI-Інструмент для тексту та SEO">
+  <meta name="twitter:description" content="Заробіток із текстами: як використовувати ChatGPT для фрілансу.">
+  <meta name="twitter:image" content="https://example.com/images/chatgpt-preview.png">
+
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../lang.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <style>
+    .tool-card {
+      animation: fadeInUp 0.7s ease;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .screenshot {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+    .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Зменшена максимальна ширина */
+  height: 0;
+  padding-bottom: 40%; /* або 56.25% для 16:9 */
+  margin: 30px auto 0; /* Центрування */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 153, 255, 0.3);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+    .tabs {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #111;
+      color: #00ccff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .tab-btn:hover {
+      background: #00ccff;
+      color: #000;
+    }
+    .tab-btn.active {
+      background: #00ccff;
+      color: #000;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 0.4s ease;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      margin-top: 30px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+    .slide {
+      min-width: 300px;
+      flex-shrink: 0;
+      background: #111;
+      border-radius: 10px;
+      padding: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.2);
+      transition: transform 0.3s;
+    }
+    .slide:hover {
+      transform: scale(1.05);
+    }
+    .slider-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .slider-nav button {
+      background: #222;
+      color: #00ccff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .slider-nav button:hover {
+      background: #00ccff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-i18n="chatgpt_title">ChatGPT — AI-інструмент для тексту та фрілансу</h1>
+    <div class="lang-dropdown">
+      <button class="lang-btn">🌐 Українська ▼</button>
+      <div class="lang-options">
+        <div onclick="setLang('en')">🇬🇧 English</div>
+        <div onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div onclick="setLang('ua')">🇺🇦 Українська</div>
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <a href="/index.html" data-i18n="nav_home">🏠 Головна</a>
+    <!--  <a href="/index.html#addForm" data-i18n="nav_add_tool">➕ Додати</a> -->
+   <!-- <a href="stories.html" data-i18n="nav_add_history">📖 Історії</a> -->
+  </nav>
+  <main class="container">
+    <div class="tool-card">
+      <img src="https://chat.openai.com/favicon.ico" alt="ChatGPT" class="screenshot">
+  
+      <h2 data-i18n="chatgpt_title">ChatGPT</h2>
+      <p data-i18n="chatgpt_description">ChatGPT — це один із найпотужніших AI-інструментів...</p>
+      <p data-i18n="chatgpt_tip_text">✍️ Порада: Створи портфоліо з прикладами статей...</p>
+  
+      <div class="rating" data-tool="chatgpt"></div>
+      <span class="votes-count" data-tool="chatgpt"></span>
+  
+      <div class="badge badge🔥" data-i18n="badge_top_earnings">🔥 Популярний</div>
+      <p data-i18n="example_case">💡 Кейс: Андрій (24 роки, Київ)...</p>
+  
+      <a href="https://chat.openai.com/" target="_blank" class="earnings-btn" data-i18n="key_відкрити">🌐 Відкрити ChatGPT</a>
+  
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/51NJmycAS9M" title="Як працює ChatGPT" allowfullscreen></iframe>
+      </div>
+  
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('features', event)" data-i18n="tab_features">🔧 Функції</button>
+        <button class="tab-btn" onclick="showTab('tips', event)" data-i18n="tab_tips">💡 Поради</button>
+        <button class="tab-btn" onclick="showTab('examples', event)" data-i18n="tab_examples">📚 Приклади</button>
+      </div>
+  
+      <div id="features" class="tab-content active" data-i18n-tab="features">
+        <!-- Динамічне наповнення -->
+      </div>
+      <div id="tips" class="tab-content" data-i18n-tab="tips">
+        <!-- Динамічне наповнення -->
+      </div>
+      <div id="examples" class="tab-content" data-i18n-tab="examples">
+        <!-- Динамічне наповнення -->
+      </div>
+  
+      <div class="slider" id="slider">
+        <div class="slide" data-i18n="chatgpt_slide_1">🎯 "Створив лендінг за 30 хв через ChatGPT" — фрилансер з Польщі</div>
+        <div class="slide" data-i18n="chatgpt_slide_2">💬 "Пишу email-розсилки клієнтам через AI" — контентник з Канади</div>
+        <div class="slide" data-i18n="chatgpt_slide_3">📖 "Продала 50+ текстів на Fiverr за місяць" — копірайтер з Одеси</div>
+      </div>
+  
+      <div class="slider-nav">
+        <button onclick="scrollSlider(-1)">←</button>
+        <button onclick="scrollSlider(1)">→</button>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    function setLang(lang) {
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = lang;
+      applyLang(lang);
+      const btn = document.querySelector(".lang-btn");
+      if (btn) btn.innerHTML =
+        lang === "en" ? "🌐 English ▼" :
+        lang === "de" ? "🌐 Deutsch ▼" :
+        "🌐 Українська ▼";
+  
+      // Закриваємо меню мов
+      const menu = document.querySelector(".lang-options");
+      if (menu) menu.style.display = "none";
+    }
+  
+    // Показ табу з прокруткою
+    function showTab(tabId, event) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      const tabEl = document.getElementById(tabId);
+      if (tabEl) {
+        tabEl.classList.add('active');
+        tabEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (event?.target) {
+        event.target.classList.add('active');
+      }
+    }
+  
+    function scrollSlider(direction) {
+      const slider = document.getElementById("slider");
+      const slideWidth = slider.querySelector(".slide").offsetWidth + 16;
+      slider.scrollBy({ left: slideWidth * direction, behavior: 'smooth' });
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      setLang(localStorage.getItem("lang") || "ua");
+  
+      // Мовний перемикач
+      const langBtn = document.querySelector(".lang-btn");
+      if (langBtn) {
+        langBtn.addEventListener("click", e => {
+          e.stopPropagation();
+          const menu = document.querySelector(".lang-options");
+          menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+      }
+  
+      window.addEventListener("click", () => {
+        const menu = document.querySelector(".lang-options");
+        if (menu) menu.style.display = "none";
+      });
+  
+      // ScrollReveal
+      ScrollReveal().reveal('.tool-card, .tab-content, .slide', {
+        distance: '20px',
+        duration: 600,
+        easing: 'ease-out',
+        origin: 'bottom',
+        interval: 150
+      });
+    });
+
+    
+  </script>
+  
+</body>
+</html>

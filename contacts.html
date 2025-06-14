@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:image" content="https://example.com/preview.png">
+  <meta property="og:url" content="https://example.com/contacts.html">
+
+  <meta name="description" content="Зв'яжіться з нами щодо AI-інструментів для заробітку. Telegram, email, форма запиту.">
+<meta name="keywords" content="контакти, AI інструменти, заробіток, підтримка, форма, Telegram, email">
+<meta name="author" content="AI Tools Project">
+  <title data-i18n="contacts_title">Контакти</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #0a0a0a;
+  color: #fff;
+  margin-bottom: 10px;
+}
+button[type="submit"] {
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #00ffaa;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 28px;
+  color: #00ccff;
+}
+
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.lang-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.lang-options button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-options button:hover {
+  background-color: #333;
+}
+
+.contact-box {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 153, 255, 0.3);
+  margin-top: 30px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 14px;
+  background-color: #111;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.socials a {
+  color: #00aaff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.socials a:hover {
+  color: #00ffaa;
+  text-shadow: 0 0 5px #00ffaa;
+}
+a:hover {
+  color: #00ffaa;
+  text-shadow: 0 0 5px #00ffaa;
+  transition: 0.3s;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+</style>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="page-title" data-i18n="contacts_header">Зв'яжіться з нами</h1>
+      <div class="language-selector">
+        <button class="lang-btn">🌐 Українська ▼</button>
+        <div class="lang-options">
+          <button onclick="setLang('ua')">🇺🇦 Українська</button>
+          <button onclick="setLang('en')">🇬🇧 English</button>
+          <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-box">
+      <a data-i18n="contacts_titlee" href="index.html">← Назад до головної</a>
+      <p data-i18n="contacts_info">Якщо у вас є запитання або пропозиції, напишіть нам:</p>
+  
+      <!-- 📧 Контактна інформація -->
+      <ul>
+         <!-- <li>📧 Email: <a href="mailto:info@example.com">info@example.com</a></li>-->
+        <li>💬 Telegram: <a href="https://t.me/AIToolsCatalog" target="_blank">https://t.me/AIToolsCatalog</a></li>
+      </ul>
+  
+      
+      <!-- 🌐 Соціальні мережі -->
+      <div class="socials" style="margin: 10px 0;">
+        <a href="#" target="_blank" onclick="return false;" >🐦 Twitter X (Coming Soon)</a> |
+        <a href="#" target="_blank" onclick="return false;" >💼 LinkedIn (Coming Soon)</a>
+      </div>
+  
+      <!-- 📬 Форма зворотного зв'язку -->
+      <form action="https://formspree.io/f/xzzgrkoo" method="POST">
+        <label data-i18n="label_name">Ім'я:</label><br />
+        <input type="text" name="name" required /><br /><br />
+      
+        <label>Email:</label><br />
+        <input type="email" name="email" required /><br /><br />
+      
+        <label data-i18n="label_message">Повідомлення:</label><br />
+        <textarea name="message" rows="5" required></textarea><br /><br />
+      
+        <button type="submit" data-i18n="send_btn">Надіслати</button>
+      </form>
+      
+    </section>
+  </main>
+  
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 AI Tools Catalog</p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script>
+
+
+    function applyLang(lang) {
+  const titleTag = document.querySelector("title");
+  const descTag = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+
+  if (lang === 'en') {
+    titleTag.textContent = "AI Tools Catalog for Earning Money";
+    descTag?.setAttribute("content", "Compare top AI tools like ChatGPT, Midjourney, and more. Start earning as a freelancer or creator.");
+    ogTitle?.setAttribute("content", "AI Tools for Making Money");
+    ogDesc?.setAttribute("content", "Real cases and best AI tools to help you earn online.");
+  } else if (lang === 'de') {
+    titleTag.textContent = "KI-Tools zum Geldverdienen – Katalog";
+    descTag?.setAttribute("content", "Finde die besten KI-Tools wie ChatGPT, Midjourney und mehr. Verdiene online mit AI, egal ob Freelancer oder Anfänger.");
+    ogTitle?.setAttribute("content", "KI-Tools zum Geldverdienen");
+    ogDesc?.setAttribute("content", "Vergleiche Tools, sieh echte Erfolgsgeschichten und starte jetzt dein KI-Einkommen.");
+  } else {
+    titleTag.textContent = "Каталог AI-Інструментів для Заробітку";
+    descTag?.setAttribute("content", "Порівнюй найкращі AI-інструменти — для фрілансу, бізнесу, Etsy або TikTok.");
+    ogTitle?.setAttribute("content", "Каталог AI-Інструментів для Заробітку");
+    ogDesc?.setAttribute("content", "Порівнюй, дізнавайся кейси та розраховуй прибуток. Всі AI-інструменти в одному місці!");
+  }
+
+  // Текстові елементи
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const translation = translations[lang]?.[key];
+    if (translation) el.innerHTML = translation;
+  });
+}
+
+// 3. Встановлення мови
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+  applyLang(lang);
+
+  const btn = document.querySelector(".lang-btn");
+  if (btn) {
+    btn.innerHTML =
+      lang === "en" ? "🌐 English ▼" :
+      lang === "de" ? "🌐 Deutsch ▼" :
+                      "🌐 Українська ▼";
+  }
+
+  const menu = document.querySelector(".lang-options");
+  if (menu) menu.style.display = "none";
+}
+
+// 4. Події перемикання мов
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "ua";
+  setLang(savedLang);
+
+  const langBtn = document.querySelector(".lang-btn");
+  const langOptions = document.querySelector(".lang-options");
+
+  if (langBtn && langOptions) {
+    langBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      langOptions.style.display =
+        langOptions.style.display === "block" ? "none" : "block";
+    });
+
+    window.addEventListener("click", () => {
+      langOptions.style.display = "none";
+    });
+  }
+});
+
+// Доступ з інших скриптів
+window.translations = translations;
+window.setLang = setLang;
+window.applyLang = applyLang;
+
+console.log("🌐 Встановлено мову:", localStorage.getItem("lang"));
+  </script>
+</body>
+</html>

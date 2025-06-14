@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вхід</title>
+  
+   <!-- Firebase SDK — ПІСЛЯ title -->
+   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+   
+  </head>
+<style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.2);
+    }
+  
+    h1 {
+      text-align: center;
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+  
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00aaff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #0088cc;
+    }
+  
+    .login-btn {
+      color: #00aaff;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  
+    .login-btn:hover {
+      text-decoration: underline;
+    }
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 207, 207);
+    color: #444;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+  }
+
+  .google-btn:hover {
+    background-color: #f1f1f1;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  </style>
+  
+<body>
+  <div class="container">
+    <h1 data-i18n="login_header">Вхід</h1>
+    <form id="loginForm">
+      <label for="email" data-i18n="email">Email:</label><br>
+      <input type="email" id="email" required><br><br>
+      <label for="password" data-i18n="password">Пароль:</label><br>
+      <input type="password" id="password" required><a href="signup.html">New Account? Sign up</a><br><br>
+      <button type="submit" data-i18n="login_btn">Увійти</button>
+    </form>
+    
+
+    <button id="googleSignup" class="google-btn">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-icon" />
+      Продовжити з Google
+    </button>
+    <p id="loginError" style="color:red;"></p>
+  </div>
+ 
+  
+
+  <script>
+    // Після завантаження DOM і Firebase
+    window.onload = function () {
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3hopQ38VGzzkEJ3ZAYRWMgBuw8PRNoVc",
+        authDomain: "ai-tools-login-a1d51.firebaseapp.com",
+        projectId: "ai-tools-login-a1d51",
+        storageBucket: "ai-tools-login-a1d51.appspot.com",
+        messagingSenderId: "210064078293",
+        appId: "1:210064078293:web:b010be90d0a07da302b95c"
+      };
+  
+      // ✅ Ініціалізація Firebase
+      firebase.initializeApp(firebaseConfig);
+  
+      // 👤 Email + пароль
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+  
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then(() => window.location.href = "profile.html")
+          .catch((error) => {
+            document.getElementById("loginError").textContent = "❌ " + error.message;
+          });
+      });
+  
+      // 🔵 Вхід через Google
+      document.getElementById("googleSignup").addEventListener("click", function () {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+          .then(() => window.location.href = "profile.html")
+          .catch((error) => {
+            alert("❌ Google Login Error:\n" + error.message);
+          });
+      });
+    };
+  </script>
+  
+  
+</body>
+</html>

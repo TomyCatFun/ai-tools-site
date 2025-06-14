@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="profile_title">Мій профіль</title>
+  <link rel="stylesheet" href="style.css">
+
+ <!-- Firebase SDK -->
+ <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+<script>
+  // Твій той самий config
+  firebase.initializeApp(firebaseConfig);
+
+  firebase.auth().onAuthStateChanged((user) => {
+  if (!user) {
+    window.location.href = "login.html";
+  } else {
+    const name = user.displayName || user.email;
+    document.getElementById("profileContainer").innerHTML = `
+      <div class="container">
+        <h1>👋 Привіт, <strong>${name}</strong></h1>
+        <button onclick="logout()">🚪 Вийти</button>
+      </div>`;
+  }
+});
+
+
+  function logout() {
+    firebase.auth().signOut().then(() => {
+      window.location.href = "index.html";
+    });
+  }
+</script>
+</head>
+<style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.2);
+    }
+  
+    h1 {
+      text-align: center;
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+  
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00aaff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #0088cc;
+    }
+  
+    .login-btn {
+      color: #00aaff;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  
+    .login-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
+  <body>
+    <div class="container" id="profileContainer">
+      <h1 data-i18n="profile_welcome">Завантаження профілю...</h1>
+    </div>
+  
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3hopQ38VGzzkEJ3ZAYRWMgBuw8PRNoVc",
+        authDomain: "ai-tools-login-a1d51.firebaseapp.com",
+        projectId: "ai-tools-login-a1d51",
+        storageBucket: "ai-tools-login-a1d51.appspot.com",
+        messagingSenderId: "210064078293",
+        appId: "1:210064078293:web:b010be90d0a07da302b95c"
+      };
+      firebase.initializeApp(firebaseConfig);
+  
+      firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+          window.location.href = "login.html";
+        } else {
+          document.getElementById("profileContainer").innerHTML = `
+            <div class="container">
+              <h1>👋 Привіт, ${user.email}</h1>
+              <button onclick="logout()">🚪 Вийти</button>
+            </div>`;
+        }
+      });
+  
+      function logout() {
+        firebase.auth().signOut().then(() => {
+          window.location.href = "index.html";
+        });
+      }
+    </script>
+  </body>
+  
+</html>

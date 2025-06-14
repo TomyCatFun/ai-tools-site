@@ -1,0 +1,628 @@
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+    header {
+      background: linear-gradient(to right, #111, #0a3cff);
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .controls input, .controls select {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .tool-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.3);
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+    .tool-card:hover {
+      transform: scale(1.02);
+    }
+    .tool-card h2 {
+      margin-top: 0;
+      color: #00aaff;
+    }
+    .tool-card p {
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+    .tool-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ffffff;
+      background-color: #0066ff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .tool-card a:hover {
+      background-color: #0051cc;
+    }
+    .rating {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #55544e;
+  cursor: pointer;
+  margin-top: 8px;
+  position: relative;
+}
+
+.rating span {
+  font-size: 1.4em;
+  color: #53524d;
+  margin-right: 2px;
+  transition: transform 0.1s;
+  position: relative;
+  outline: none;
+}
+.rating span:hover,
+.rating span.selected {
+  color: #fff700;
+}
+.rating span.hovered {
+  color: #fff700 !important;
+  transition: color 0.1s;
+}
+
+.rating span.half {
+  color: #ffd600;
+  position: relative;
+}
+.rating span.user-vote {
+  outline: 2px solid #00aaff;
+  border-radius: 3px;
+}
+.rating span:focus {
+  outline: none;
+}
+.votes-count {
+  display: block;
+  font-size: 0.95em;
+  color: #aaa;
+  margin-left: 0;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.earnings-btn {
+  margin-top: 12px;
+  display: inline-block;
+  background-color: #00aaff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.earnings-btn:hover {
+  background-color: #0088dd;
+  transform: scale(1.02);
+}
+
+@media (max-width: 480px) {
+  .earnings-btn {
+    padding: 10px 16px;
+    font-size: 0.95em;
+  }
+}
+#compareTable th,
+#compareTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #333;
+}
+#compareTable th {
+  background-color: #0f1f3d;
+  color: #00ccff;
+  font-weight: bold;
+}
+#compareTable td {
+  background-color: #121212;
+}
+#compareTable tr:hover td {
+  background-color: #1e1e1e;
+}
+#mini-guides {
+  background: rgba(22,35,70,0.18);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,153,255,0.11);
+  padding: 28px 32px 16px 32px;
+  margin: 40px auto;
+  max-width: 680px;
+  display: block;
+}
+#mini-guides h2 {
+  color: #00aaff;
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+#mini-guides ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#mini-guides li {
+  background: rgba(14,23,38,0.27); /* Світліший ніж було */
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  transition: background 0.23s, box-shadow 0.19s, transform 0.17s;
+  box-shadow: 0 0 0 rgba(0,255,255,0.00);
+}
+#mini-guides li:hover {
+  background: rgba(0,172,255,0.09);
+  box-shadow: 0 0 16px 3px rgba(0,255,255,0.12), 0 0 5px 2px #00cfff44;
+  transform: translateY(-2px) scale(1.028);
+}
+#mini-guides li b {
+  color: #00d0ff;
+  margin-right: 7px;
+  font-weight: 600;
+}
+#mini-guides a {
+  color: #00ffea;
+  text-decoration: underline dotted;
+  margin-left: 4px;
+  transition: color 0.18s;
+}
+#mini-guides a:hover {
+  color: #fff700;
+  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  #mini-guides {
+    padding: 16px 5vw 12px 5vw;
+  }
+  #mini-guides h2 {
+    font-size: 1.18em;
+  }
+  #mini-guides li {
+    font-size: 1em;
+    padding: 8px 8px;
+  }
+}
+.guide-link {
+  background: rgba(22, 35, 70, 0.18);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  transition: background 0.23s, box-shadow 0.19s, transform 0.17s;
+  box-shadow: 0 0 0 rgba(0,255,255,0.00);
+  cursor: pointer;
+}
+.guide-link:hover {
+  background: rgba(0,172,255,0.09);
+  box-shadow: 0 0 16px 3px rgba(0,255,255,0.12), 0 0 5px 2px #00cfff44;
+  transform: translateY(-2px) scale(1.028);
+}
+.guide-link .highlight {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+.guide-link:hover .highlight {
+  color: #fdff7a; /* Жовтий при наведенні на блок */
+}
+.faq-item {
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.faq-question {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: #00aaff;
+  transition: color 0.2s;
+}
+.faq-answer {
+  display: none;
+  margin-top: 8px;
+  color: #ccc;
+  line-height: 1.5;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+.faq-item:hover .faq-question {
+  color: #00ccff;
+}
+.knowledge-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.knowledge-layout > section {
+  flex: 1 1 320px;
+  max-width: 400px;
+}
+.subscribe-box {
+  background: #0f1f3d;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 680px;
+  box-shadow: 0 0 14px rgba(0, 170, 255, 0.18);
+  text-align: center;
+}
+.subscribe-box h2 {
+  color: #00ccff;
+  font-size: 1.5em;
+  margin-bottom: 12px;
+}
+.subscribe-box p {
+  color: #ccc;
+  font-size: 1em;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.subscribe-form input[type="email"] {
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.subscribe-form button {
+  padding: 12px;
+  background: #00aaff;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.subscribe-form button:hover {
+  background: #0088cc;
+}
+.subscribe-form a {
+  color: #00ffcc;
+  text-decoration: underline;
+  font-size: 1em;
+}
+.subscribe-success {
+  color: #00ff88;
+  margin-top: 12px;
+  display: none;
+  font-weight: bold;
+}
+
+/* 📱 Адаптація під мобільні */
+@media (max-width: 480px) {
+  .subscribe-box {
+    padding: 24px 16px;
+  }
+  .subscribe-form input,
+  .subscribe-form button {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .subscribe-box h2 {
+    font-size: 1.3em;
+  }
+}
+.badge {
+  display: inline-block;
+  background: #00ccff;
+  color: #000;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 16px;
+  margin: 6px 8px 4px 0;
+  line-height: 1.3;
+  box-shadow: 0 2px 6px rgba(0, 204, 255, 0.25);
+  white-space: nowrap;
+}
+
+.badge🔥 {
+  background: #ff5e00;
+  color: #fff;
+}
+.badge💼 {
+  background: #00aa88;
+  color: #fff;
+}
+.badge💸 {
+  background: #ffaa00;
+  color: #000;
+}
+
+.affiliate-box a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.affiliate-box {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 0 12px rgba(0,153,255,0.2);
+  cursor: pointer;
+}
+.affiliate-header {
+  text-align: center;
+  font-size: 18px;
+  color: #00a2ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.join-btn {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.join-btn:hover {
+  background: #0088cc;
+}
+.affiliate-title {
+  display: inline-block;
+}
+.affiliate-box:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.02);
+  box-shadow: 0 0 16px rgba(0, 204, 255, 0.4);
+}
+#supportToggle:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.4);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 12px rgba(0,194,255,0.4); }
+  50% { box-shadow: 0 0 18px rgba(0,194,255,0.7); }
+  100% { box-shadow: 0 0 12px rgba(0,194,255,0.4); }
+}
+#supportToggle {
+  animation: pulse 2.5s infinite;
+}
+.support-btn {
+  cursor: pointer;
+  display: block;
+  width: 96%;
+  max-width: 680px;
+  margin: 30px auto;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, #0a84ff, #00c2ff);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(0, 194, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.4);
+}
+
+.support-links {
+  width: 96%;
+  max-width: 680px;
+  margin: 16px auto;
+  padding: 18px 24px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0,153,255,0.15);
+  font-size: 0.98em;
+}
+
+#supportLinks a,
+#affiliate-links a {
+  color: #00c2ff;              /* базовий колір */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#supportLinks a:hover,
+#affiliate-links a:hover {
+  color: #ffd700;              /* жовтий при наведенні */
+}
+
+#supportLinks a:visited,
+#supportLinks a:active,
+#supportLinks a:focus,
+#affiliate-links a:visited,
+#affiliate-links a:active,
+#affiliate-links a:focus {
+  color: #00c2ff;              /* не змінюється на фіолетовий або червоний */
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #111;
+  padding: 12px 0;
+  margin-top: -10px;
+  box-shadow: 0 2px 10px rgba(0, 204, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05em;
+  padding: 8px 14px;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  background: rgba(0, 204, 255, 0.1);
+  color: #ffe867;
+  border-radius: 6px;
+}
+.buymeacoffee {
+  position: absolute;
+  top: 97px;
+  right: 200px;
+}
+.lang-dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.donate-btn, .subscribe-btn, .consult-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 10px 0;
+  background-color: #ffdd00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.donate-btn:hover, .subscribe-btn:hover, .consult-btn:hover {
+  background-color: #ffcc00;
+}
+.lang-btn {
+  background: #00ccff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+}
+.lang-options {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #111;
+  border: 1px solid #00ccff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 204, 255, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+}
+.lang-options div {
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lang-options div:hover {
+  background: #00ccff;
+  color: #ffffff;
+}
+.carousel-wrapper {
+  overflow: hidden; /* Прибирає повзунок */
+  position: relative;
+  display: flex;
+  padding: 20px 10px;
+  border-radius: 12px;
+  background: #141414;
+  box-shadow: 0 0 12px #00aaff66;
+  cursor: grab;
+}
+.carousel-wrapper:active {
+  cursor: grabbing;
+}
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  min-width: 100%;
+}
+.user-greeting {
+  color: #00ccff;
+  margin-left: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  margin-left: 15px;
+  color: #ff6666;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #ff4444;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .user-greeting, .logout-btn {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.carousel-item {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px #00ccff33;
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .carousel-item {
+    font-size: 14px;
+    padding: 16px;
+  }
+}
+#toggleCases:hover {
+    color: #00ff66 !important; /* яскраво-зелений */
+
+  }
+

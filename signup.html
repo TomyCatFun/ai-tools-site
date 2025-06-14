@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="signup_title">Реєстрація</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.2);
+    }
+    input, button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    input {
+      background: #2a2a2a;
+      color: #fff;
+    }
+    button {
+      background-color: #00aaff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0088cc;
+    }
+    .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #444;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+  }
+
+  .google-btn:hover {
+    background-color: #f1f1f1;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  </style>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA3hopQ38VGzzkEJ3ZAYRWMgBuw8PRNoVc",
+    authDomain: "ai-tools-login-a1d51.firebaseapp.com",
+    projectId: "ai-tools-login-a1d51",
+    storageBucket: "ai-tools-login-a1d51.firebasestorage.app",
+    messagingSenderId: "210064078293",
+    appId: "1:210064078293:web:b010be90d0a07da302b95c"
+  };
+
+  // Ось тут правильна ініціалізація для compat
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Реєстрація</h1>
+        <form id="signupForm">
+          <input type="text" id="name" placeholder="Ім’я" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Пароль" required>
+          <button type="submit">Зареєструватися</button>
+        </form>
+        <button id="googleSignup" class="google-btn">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-icon" />
+          Продовжити з Google
+        </button>
+        
+        <p id="signupMessage"></p>
+      </div>
+    
+      <script>
+        document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      // 🔹 Оновлюємо ім’я користувача у Firebase профілі
+      return user.updateProfile({ displayName: name });
+    })
+    .then(() => {
+      document.getElementById("signupMessage").textContent = "Успішна реєстрація!";
+      window.location.href = "profile.html";
+    })
+    .catch((error) => {
+      document.getElementById("signupMessage").textContent = "❌ " + error.message;
+    });
+});
+
+document.getElementById("googleSignup").addEventListener("click", function () {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+      .then((result) => {
+        // Успішна авторизація Google
+        window.location.href = "profile.html";
+      })
+      .catch((error) => {
+        alert("❌ Помилка Google-реєстрації:\n" + error.message);
+      });
+  });
+      </script>
+</body>
+</html>

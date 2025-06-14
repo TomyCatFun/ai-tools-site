@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>AI Tools Catalog</title>
+</head>
+<body>
+
+<!-- Кнопки та модалки повинні бути тут (припускається, що вони вже в HTML, ми лише виправляємо JS) -->
+
+<!-- Порожній div для результату -->
+<div id="calcResult" style="margin-top: 20px; color: #fff;"></div>
+
+<script>
+  const translations = {
+    ua: {
+      compare_alert: "Виберіть щонайменше 2 інструменти для порівняння.",
+      field_parameter: "Параметр",
+      field_name: "Назва",
+      field_price: "Ціна",
+      field_features: "Функції",
+      field_difficulty: "Легкість",
+      field_language: "Мова",
+      field_payout: "Заробіток",
+      field_popularity: "Популярність",
+      calc_platform: "Платформа",
+      calc_profit_after_fee: "Прибуток після комісії",
+      calc_week: "за тиждень",
+      calc_month: "за місяць",
+      calc_rate: "Ставка",
+      calc_fee: "Комісія"
+    }
+  };
+
+  const toolData = {
+    "chatgpt": { name: "ChatGPT", price: "$20", features: "Text", difficulty: "★★★☆☆", language: "UA/EN", payout: "$600", popularity: "🔥", earnings: 600, jobs: 1000, investment: 0 },
+    "midjourney": { name: "Midjourney", price: "$10", features: "Images", difficulty: "★★☆☆☆", language: "EN", payout: "$400", popularity: "🔥", earnings: 400, jobs: 800, investment: 0 }
+  };
+
+  const savedLang = localStorage.getItem("lang") || "ua";
+
+  document.getElementById("compareBtn").onclick = function () {
+    const checked = Array.from(document.querySelectorAll(".compare-checkbox:checked"));
+    if (checked.length < 2) {
+      alert(translations[savedLang].compare_alert);
+      return;
+    }
+
+    const rows = [
+      { label: translations[savedLang].field_name, key: "name" },
+      { label: translations[savedLang].field_price, key: "price" },
+      { label: translations[savedLang].field_features, key: "features" },
+      { label: translations[savedLang].field_difficulty, key: "difficulty" },
+      { label: translations[savedLang].field_language, key: "language" },
+      { label: translations[savedLang].field_payout, key: "payout" },
+      { label: translations[savedLang].field_popularity, key: "popularity" }
+    ];
+
+    const html = [];
+    html.push("<tr><th>" + translations[savedLang].field_parameter + "</th>" +
+      checked.map(cb => `<th>${cb.dataset.tool}</th>`).join("") + "</tr>");
+
+    rows.forEach(row => {
+      html.push("<tr><td>" + row.label + "</td>" +
+        checked.map(cb => {
+          const tool = toolData[cb.dataset.tool];
+          return `<td>${tool?.[row.key] || "-"}</td>`;
+        }).join("") +
+        "</tr>");
+    });
+
+    document.getElementById("compareTable").innerHTML = html.join("");
+    document.getElementById("compareModal").style.display = "flex";
+  };
+
+  function calculateEarnings() {
+    const tool = document.getElementById("calcTool").value;
+    const platform = document.getElementById("calcPlatform").value;
+    const hours = parseInt(document.getElementById("calcHours").value) || 0;
+
+    const rates = { chatgpt: 12, midjourney: 8 };
+    const platformFees = { upwork: 0.1, fiverr: 0.2, etsy: 0.0, tiktok: 0.0 };
+
+    const baseRate = rates[tool] || 10;
+    const fee = platformFees[platform] || 0;
+
+    const grossWeekly = baseRate * hours;
+    const netWeekly = grossWeekly * (1 - fee);
+    const netMonthly = netWeekly * 4;
+
+    document.getElementById("calcResult").innerHTML = `
+      💼 ${translations[savedLang].calc_platform}: <strong>${platform}</strong>
+      <br>📅 ${translations[savedLang].calc_profit_after_fee}:
+      <br>– ${translations[savedLang].calc_week}: <strong>$${netWeekly.toFixed(2)}</strong>
+      <br>– ${translations[savedLang].calc_month}: <strong>$${netMonthly.toFixed(2)}</strong>
+      <br><span style="font-size:0.85em;color:#777">
+        * ${translations[savedLang].calc_rate}: $${baseRate}/h, ${translations[savedLang].calc_fee}: ${(fee * 100).toFixed(0)}%
+      </span>
+    `;
+  }
+</script>
+
+</body>
+</html>
