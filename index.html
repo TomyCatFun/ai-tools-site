@@ -2065,6 +2065,11 @@ const loginLink = document.querySelector(".login-btn");
     loginLink.href = "profile.html";
   }
 
+  if (location.pathname.endsWith("index.html") || location.href.endsWith("?")) {
+  history.replaceState(null, "", "/");
+}
+
+
   </script>
 
 

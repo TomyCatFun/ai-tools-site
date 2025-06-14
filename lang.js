@@ -764,6 +764,7 @@ window.setLang = setLang;
 window.applyLang = applyLang;
 
 console.log("🌐 Встановлено мову через setLang:", localStorage.getItem("lang"));
-if (window.location.pathname.endsWith("index.html") && window.location.search === "?") {
-  history.replaceState(null, "", "/");
+
+if (window.location.search === "?") {
+  history.replaceState(null, "", window.location.pathname);
 }
