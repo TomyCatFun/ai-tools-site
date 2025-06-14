@@ -1027,7 +1027,7 @@ const savedLang = localStorage.getItem("lang") || "ua";
       logoutBtn.addEventListener("click", function (e) {
         e.preventDefault();
         firebase.auth().signOut().then(() => {
-          history.replaceState(null, null, "./"); // або перезавантаження
+          window.location.href = "index.html"; // або перезавантаження
         });
       });
     }
