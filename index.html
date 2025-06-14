@@ -34,7 +34,7 @@
 <link rel="alternate" hreflang="en" href="https://example.com/?lang=en" />
 <link rel="alternate" hreflang="de" href="https://example.com/?lang=de" />
 
-<title>AI Tools для Заробітку 💰 | Каталог + Калькулятор</title>
+<title>AI Tools Profit</title>
 <link rel="stylesheet" href="style.css">
 
 <meta name="description" content="Порівнюй найкращі AI-інструменти — для фрілансу, бізнесу, Etsy або TikTok. Заробляй з ChatGPT, Midjourney, Notion AI та ін.">
@@ -1027,7 +1027,7 @@ const savedLang = localStorage.getItem("lang") || "ua";
       logoutBtn.addEventListener("click", function (e) {
         e.preventDefault();
         firebase.auth().signOut().then(() => {
-          window.location.href = "index.html"; // або перезавантаження
+          history.replaceState(null, null, "./"); // або перезавантаження
         });
       });
     }
