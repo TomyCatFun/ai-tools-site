@@ -1036,6 +1036,24 @@ const savedLang = localStorage.getItem("lang") || "ua";
 
 
 <script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+
+<footer>
+  <!-- твій контент футера -->
+
+  <script>
+    // 🔹 Кількість переглядів сторінки
+    let views = +localStorage.getItem("siteViews") || 0;
+    views++;
+    localStorage.setItem("siteViews", views);
+
+    // 🔹 Виводимо на сторінку
+    const statsBox = document.createElement("div");
+    statsBox.innerHTML = `👁️ Переглядів: <strong>${views}</strong>`;
+    statsBox.style = "color:#aaa; text-align:center; margin-top:20px;";
+    document.body.appendChild(statsBox);
+  </script>
+</footer>
+
 </body>
 
 <script>
@@ -1135,6 +1153,7 @@ window.addEventListener("DOMContentLoaded", () => {
       setupToolLinks();
       renderRatings();
 
+      
       
 
       const savedLang = localStorage.getItem("lang") || "ua";
